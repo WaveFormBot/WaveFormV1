@@ -23,7 +23,7 @@ class Stats extends Command {
 
     return msg.send(this.client.embed()
       .setTitle("Miyako - Bot Statistics")
-      .setDescription("Hi, I'm Miyako. The all-in-one entertainment bot for your server brought to you by my master Ravener#5796")
+        .setDescription("Hey! i'm WaveForm! A bot heavily recoded by Allen K.#7284 and Captiosus#4658")
       .setAuthor(this.client.user.tag, this.client.user.displayAvatarURL({ size: 64 }))
       .addField("Bot Stats", [
         `**Guilds:** ${client.guilds.cache.size}`,

@@ -12,7 +12,7 @@ class Bug extends Command {
   }
   
   async run(msg, args) {
-    if(!args.length) return msg.send("Baka! What is the bug report?");
+    if(!args.length) return msg.send("Hello my brotha! What is the bug report?");
     const channel = this.client.channels.cache.get("460800229667504148");
     const embed = this.client.embed()
       .setTitle("Bug Report")
@@ -21,7 +21,7 @@ class Bug extends Command {
       .setFooter(msg.author.id);
 
     await channel.send({ embed });
-    return msg.send(`Your bug report has been sent${msg.guild && msg.guild.id === this.client.constants.mainGuildID ? "" : " to the support server."} You will hear back from my owner in DMs if there is anything wrong with your report. Have a nice day!`);
+    return msg.send(`Your bug report has been sent${msg.guild && msg.guild.id === this.client.constants.mainGuildID ? "" : " to the support server."} You will hear back from my big boi owners in DMs if there is anything wrong with your report. Have a nice day!`);
   }
 }
 

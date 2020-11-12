@@ -18,12 +18,12 @@ class Announcements extends Command {
     const announcement = messages.first();
     
     const embed = this.client.embed()
-      .setTitle("Bot announcement!")
+      .setTitle("WaveForm announcement!")
       .setAuthor(announcement.author.username, announcement.author.displayAvatarURL({ size: 64 }))
       .setDescription(announcement.cleanContent)
       .setThumbnail(announcement.author.displayAvatarURL({ size: 512 }))
       .setTimestamp(new Date(announcement.createdTimestamp))
-      .setFooter(`From Miyako Lounge (run ${msg.guild ? msg.guild.settings.prefix : "w!"}support to join us)`);
+      .setFooter(`From WaveForm Media (run ${msg.guild ? msg.guild.settings.prefix : "w!"}support to join us)`);
 
     return msg.send({ embed });
   }
