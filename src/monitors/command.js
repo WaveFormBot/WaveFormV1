@@ -108,7 +108,7 @@ class CommandHandler extends Monitor {
     // Command checks.
 
     if(command.ownerOnly && msg.author.id !== this.client.constants.ownerID)
-      return msg.send("Baka! What do you think you're doing? That command is only for my master!");
+      return msg.send("You are not the bot owner!");
 
     // Check for NSFW channel. NSFW is allowed in DMs
     if(command.nsfw && msg.guild && !msg.channel.nsfw)
