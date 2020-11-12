@@ -10,7 +10,7 @@ const delim = new RegExp("(\\s)(?:\\s)+");
 class CommandHandler extends Monitor {
   constructor(...args) {
     super(...args);
-    this.prefix = "w!"; // Default prefix.
+    this.prefix = ">"; // Default prefix.
     this.ratelimits = new Collection();
     this.friendlyPerms = Object.keys(Permissions.FLAGS).reduce((obj, key) => {
       obj[key] = this.client.utils.toProperCase(key.split("_").join(" "));
