@@ -10,7 +10,7 @@ const delim = new RegExp("(\\s)(?:\\s)+");
 class CommandHandler extends Monitor {
   constructor(...args) {
     super(...args);
-    this.prefix = ">"; // Default prefix.
+    this.prefix = "w!"; // Default prefix.
     this.ratelimits = new Collection();
     this.friendlyPerms = Object.keys(Permissions.FLAGS).reduce((obj, key) => {
       obj[key] = this.client.utils.toProperCase(key.split("_").join(" "));
@@ -65,7 +65,7 @@ class CommandHandler extends Monitor {
 
     // Check for @mention only.
     if(msg.content === this.client.user.toString() || (msg.guild && msg.content === msg.guild.me.toString()))
-      return msg.send(`Hi! Run \`${prefix}help\` to get a list of commands you can use.`);
+      return msg.send(`Hello my brother! Run \`${prefix}help\` to get a list of commands you can use.`);
 
     // Users can have their own list of prefixes globally.
     // Might confuse other users but doesn't matter too much
@@ -78,7 +78,7 @@ class CommandHandler extends Monitor {
     // - yo miyako ping
     // - hey miyako ping
     // - @Miyako ping
-    // - m!ping
+    // - w!ping
     // - Or custom prefix.
     // - Or custom per-user prefix.
     //
@@ -108,20 +108,20 @@ class CommandHandler extends Monitor {
     // Command checks.
 
     if(command.ownerOnly && msg.author.id !== this.client.constants.ownerID)
-      return msg.send("You are not the bot owner!");
+      return msg.send("You are not the Father! WAIT I mean bot owner!");
 
     // Check for NSFW channel. NSFW is allowed in DMs
     if(command.nsfw && msg.guild && !msg.channel.nsfw)
       return msg.send(this.client.utils.random(this.client.responses.notNSFWChannel));
 
     if(command.guildOnly && !msg.guild)
-      return msg.send("Baka! This command can only be used in a guild. What are you doing sliding in my DMs?");
+      return msg.send("Hey! This command can be only used in servers! Why u here bro?!");
 
     if(!command.enabled && msg.author.id !== this.client.constants.ownerID)
-      return msg.send("My master has ordered me to disable that command so I cannot let you use it!");
+      return msg.send("Oof! The bot owner has disabled this command!");
 
     if(command.category === "Social" && !msg.guild.settings.social)
-      return msg.send("The social economy system has been disabled in this server by an Admin so I cannot let you use that command.");
+      return msg.send("The social economy system has been disabled in this server by an Big BOI Admin so I cannot let you use that command.");
 
     // Verify the member is available and its settings are synchronized.
     if(msg.guild) {
@@ -148,11 +148,11 @@ class CommandHandler extends Monitor {
 
       // Give the user a tip if their daily is available.
       const claim = (msg.member.settings.daily === null || msg.member.settings.daily <  Date.now()) ?
-        `\n\nSeems like you're broke. Why don't you start with claiming your daily credits with \`${prefix}daily\`?` : "";
+        `\n\nSeems like you're broke *sigh.* Go make some money kid by doing \`${prefix}daily\`?` : "";
 
       // Verify enough balance.
       if(balance < cost)
-        return msg.send(`You need **¥${cost}** to run that command but you only have **¥${balance}**.${claim}`);
+        return msg.send(`You need **$${cost}** to run that command but you only have **$${balance}**.${claim}`);
       // Deduct.
       await msg.member.takePoints(cost);
     }
@@ -191,7 +191,7 @@ class CommandHandler extends Monitor {
 
     if (difference < cooldown) { // check the if the duration the command was run, is more than the cooldown
       // Return a human-readable string to the user with the remaining seconds.
-      return `Woah! Why the hurry? You can run this command again in **${Math.round((cooldown - difference) / 1000)}** seconds.`;
+      return `Hey bud! I'm not Usain Bolt! Try again in about **${Math.round((cooldown - difference) / 1000)}** seconds.`;
     } else {
       ratelimits[cmd.name] = Date.now(); // set the key to now, to mark the start of the cooldown
       this.ratelimits.set(msg.author.id, ratelimits); // set it

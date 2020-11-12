@@ -23,7 +23,7 @@ class Announcements extends Command {
       .setDescription(announcement.cleanContent)
       .setThumbnail(announcement.author.displayAvatarURL({ size: 512 }))
       .setTimestamp(new Date(announcement.createdTimestamp))
-      .setFooter(`From Miyako Lounge (run ${msg.guild ? msg.guild.settings.prefix : "m!"}support to join us)`);
+      .setFooter(`From Miyako Lounge (run ${msg.guild ? msg.guild.settings.prefix : "w!"}support to join us)`);
 
     return msg.send({ embed });
   }

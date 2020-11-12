@@ -10,7 +10,7 @@ Level up messages can be disabled and the whole social economy systen can also b
 
 Upon invite, levelup messages and the social system are enabled by default.
 
-Feel free to disable them via `m!levelup disable` or `m!social disable`
+Feel free to disable them via `w!levelup disable` or `w!social disable`
 
 ## Moderation
 While Miyako's purpose isn't to be a moderation bot we still have moderation features to be convenient.
@@ -34,6 +34,6 @@ Add some Anime GIFs to spice up your conversations with commands like:
 and more...
 
 ## Tsundere
-Miyako has a tsundere-like personality for interactions, e.g error messages. And you can enable weeb greetings (`m!weebgreetings enable #channel`) to let Miyako greet new people ;)
+Miyako has a tsundere-like personality for interactions, e.g error messages. And you can enable weeb greetings (`w!weebgreetings enable #channel`) to let Miyako greet new people ;)
 
 And much much more... This is a brief description of the bot and the bot is under active development and it would be hard to keep this list updated, invite the bot and see for yourself!

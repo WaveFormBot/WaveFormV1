@@ -7,7 +7,7 @@ class TVShow extends Command {
     super(...args, {
       aliases: ["tvshows", "tv", "tvseries"],
       description: "Finds a TV show on TMDB.org",
-      extendedHelp: "e.g. `m!tvshow universe, 2`",
+      extendedHelp: "e.g. `w!tvshow universe, 2`",
       usage: "tvshow <query>, [page]",
       cooldown: 5
     });

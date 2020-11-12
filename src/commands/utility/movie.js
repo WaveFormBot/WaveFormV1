@@ -7,7 +7,7 @@ class Movie extends Command {
     super(...args, {
       aliases: ["movies", "film", "films"],
       description: "Finds a movie on TMDB.org",
-      extendedHelp: "e.g. `m!movie infinity war, 2`",
+      extendedHelp: "e.g. `w!movie infinity war, 2`",
       usage: "movie <query>, [page]",
       cooldown: 5
     });

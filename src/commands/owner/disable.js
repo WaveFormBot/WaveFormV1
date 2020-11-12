@@ -5,7 +5,7 @@ class Disable extends Command {
     super(...args, {
       description: "Disables a command or event.",
       ownerOnly: true,
-      usage: "m!disable <command|event>"
+      usage: "w!disable <command|event>"
     });
   }
 

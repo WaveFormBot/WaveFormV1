@@ -5,7 +5,7 @@ class Enable extends Command {
     super(...args, {
       description: "Enables a command or event.",
       ownerOnly: true,
-      usage: "m!enable <command|event>"
+      usage: "w!enable <command|event>"
     });
   }
 

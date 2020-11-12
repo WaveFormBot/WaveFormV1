@@ -22,16 +22,16 @@ class Prefix extends Command {
 
     if(prefix === "reset") return this.reset(msg);
     if(prefix.length > 10) return msg.send("Prefix can't be longer than 10 characters.");
-    if(prefix === msg.guild.settings.prefix) throw "Baka! That is already the current prefix.";
+    if(prefix === msg.guild.settings.prefix) throw "Hey! That is already the current prefix.";
 
     await msg.guild.update({ prefix });
     return msg.send(`Successfully updated prefix to: \`${prefix}\``);
   }
   
   async reset(msg) {
-    if(msg.guild.settings.prefix === "m!") return msg.send("The prefix is already the default.");
-    await msg.guild.update({ prefix: "m!" });
-    return msg.send("Reset the prefix for this server to `m!`");
+    if(msg.guild.settings.prefix === "w!") return msg.send("The prefix is already the default.");
+    await msg.guild.update({ prefix: "w!" });
+    return msg.send("Reset the prefix for this server to `w!`");
   }
 }
 

@@ -18,7 +18,7 @@ class Sudo extends Command {
     const message = cloneObject(msg);
     message.author = member.user;
     Object.defineProperty(message, "member", { value: member });
-    message.content = `m!${command.name}${args.length ? ` ${args.join(" ")}` : ""}`;
+    message.content = `w!${command.name}${args.length ? ` ${args.join(" ")}` : ""}`;
     await this.client.monitors.get("command").run(msg);
   }
 }

@@ -3,7 +3,7 @@
 module.exports = {
   guilds: {
     weebGreetings: false,
-    prefix: "m!",
+    prefix: "w!",
     levelup: true,
     social: true,
     starboard: { channel: null, limit: 2 }
