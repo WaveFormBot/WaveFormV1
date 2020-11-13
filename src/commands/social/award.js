@@ -16,11 +16,11 @@ class Award extends Command {
     member = await this.verifyMember(msg, member);
     amount = this.verifyInt(amount);
 
-    if(member.user.bot) return msg.send("Baka! Bots can't have points.");
-    if(member.user.id === msg.author.id) return msg.send("Baka! You can't reward yourself. Why did you even try it?");
+    if(member.user.bot) return msg.send("Friend! Bots can't have points.");
+    if(member.user.id === msg.author.id) return msg.send("Friend! You can't reward yourself. Why did you even try it?");
     
-    if(amount < 0) return msg.rely("Baka! You can't reward them a negative amount. Are you trying to rob them?");
-    if(amount === 0) return msg.send("Baka! Why would you pay them nothing?");
+    if(amount < 0) return msg.rely("Friend! You can't reward them a negative amount. Are you trying to rob them?");
+    if(amount === 0) return msg.send("Friend! Why would you pay them nothing?");
 
     // Guard against abuse. We have to be careful not to let users add infinite points and overflow the database.
     if(amount >= 100000) return msg.send("You can't reward more than **¥100,000** at a time.");

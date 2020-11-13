@@ -17,7 +17,7 @@ class Image extends Command {
   }
 
   async run(msg, args) {
-    if(!args.length) return msg.send("Baka! What am I supposed to search?");
+    if(!args.length) return msg.send("Friend! What am I supposed to search?");
     const query = args.join(" ");
 
     // Quick validation before we go straight to requesting.

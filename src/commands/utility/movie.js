@@ -14,10 +14,10 @@ class Movie extends Command {
   }
 
   async run(msg, args) {
-    if(!args.length) return msg.send("Baka! What am I supposed to search?");
+    if(!args.length) return msg.send("Friend! What am I supposed to search?");
 
     const [query, page = 1] = args.join(" ").split(",");
-    if(isNaN(parseInt(page))) return msg.send("Baka! Page must be a number.");
+    if(isNaN(parseInt(page))) return msg.send("Friend! Page must be a number.");
 
     const url = new URL("https://api.themoviedb.org/3/search/movie");
     url.search = new URLSearchParams([["api_key", process.env.TMDB], ["query", query]]);

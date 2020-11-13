@@ -13,7 +13,7 @@ class NPM extends Command {
   }
 
   async run(msg, [pkg]) {
-    if(!pkg) return msg.send("Baka! What package am I supposed to show you?");
+    if(!pkg) return msg.send("Friend! What package am I supposed to show you?");
 
     const body = await fetch(`https://registry.npmjs.com/${pkg}`)
       .then((res) => {

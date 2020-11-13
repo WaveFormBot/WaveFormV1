@@ -12,7 +12,7 @@ class YearFact extends Command {
   }
   
   async run(msg, [year = "random"]) {
-    if(year !== "random" && isNaN(parseInt(year))) return msg.send("Baka! Does that look like a year to you?");
+    if(year !== "random" && isNaN(parseInt(year))) return msg.send("Friend! Does that look like a year to you?");
     const text = await fetch(`http://numbersapi.com/${year}/year`).then((res) => res.text());
     return msg.send(`**${text}**`);
   }

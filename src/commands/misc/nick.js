@@ -17,7 +17,7 @@ class Nick extends Command {
     else if(member === "you") member = msg.guild.me;
     else member = await this.verifyMember(msg, member);
 
-    if(!nick.length) return msg.send("Baka! You didn't tell me what nickname to use.");
+    if(!nick.length) return msg.send("Friend! You didn't tell me what nickname to use.");
     nick = nick.join(" ");
 
     if(nick.length >= 32) return msg.send("Nickname must be less than 32 characters.");

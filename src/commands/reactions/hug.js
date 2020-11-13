@@ -16,7 +16,7 @@ class Hug extends Command {
   async run(msg, [member]) {
     member = await this.verifyMember(msg, member);
 
-    if(member.id === msg.author.id) return msg.send("Baka! You can't hug yourself!");
+    if(member.id === msg.author.id) return msg.send("Friend! You can't hug yourself!");
 
     const { url } = await fetch("https://nekos.life/api/v2/img/hug")
       .then((res) => res.json());

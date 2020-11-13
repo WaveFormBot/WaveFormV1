@@ -83,7 +83,7 @@ module.exports = Structures.extend("Message", (Message) => class MiyakoMessage e
   /**
    * msg.response([
    *   "{{user}} what are you doing?",
-   *   "Baka! {{user}} stop.",
+   *   "Friend! {{user}} stop.",
    *   "...other responses."
    * ], { user: msg.author.username });
    * Normally a response would be used from client.responses

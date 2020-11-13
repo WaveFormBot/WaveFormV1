@@ -16,7 +16,7 @@ class Prefix extends Command {
     }
 
     if(!msg.member.permissions.has("MANAGE_GUILD"))
-      return msg.send("Baka! You need the `Manage Server` permissions to change the prerix.");
+      return msg.send("Friend! You need the `Manage Server` permissions to change the prerix.");
 
     const prefix = args.join(" ");
 

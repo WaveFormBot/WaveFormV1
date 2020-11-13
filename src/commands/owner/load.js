@@ -12,7 +12,7 @@ class Load extends Command {
   async run(msg, [store]) {
     if(!store) return msg.send("What store am i supposed to reload?");
     store = this.client[store];
-    if(!(store instanceof Store)) return msg.send("Baka! That's not an actual store.");
+    if(!(store instanceof Store)) return msg.send("Friend! That's not an actual store.");
 
     try {
       const before = store.size;

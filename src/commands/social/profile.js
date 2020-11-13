@@ -12,7 +12,7 @@ class Profile extends Command {
 
   async run(msg, [member]) {
     member = await this.verifyMember(msg, member, true);
-    if(member.user.bot) return msg.send("Baka! You can't view a bot's profile.");
+    if(member.user.bot) return msg.send("Friend! You can't view a bot's profile.");
 
     const embed = this.client.embed()
       .setTitle(`${member.displayName}'s profile`)

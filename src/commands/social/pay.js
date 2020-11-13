@@ -15,11 +15,11 @@ class Pay extends Command {
     member = await this.verifyMember(msg, member);
     amount = this.verifyInt(amount);
 
-    if(member.id === msg.author.id) return msg.send("Baka! Why would you pay yourself?");
-    if(member.user.bot) return msg.send("Baka! You can't pay bots.");
-    if(amount > parseInt(msg.member.settings.points)) return msg.send("Baka! You can't pay more than what you have!");
-    if(amount < 1) return msg.send("Baka! Why would you pay nothing?");
-    if(amount > Number.MAX_SAFE_INTEGER) return msg.send("Baka! That amount is too high!");
+    if(member.id === msg.author.id) return msg.send("Friend! Why would you pay yourself?");
+    if(member.user.bot) return msg.send("Friend! You can't pay bots.");
+    if(amount > parseInt(msg.member.settings.points)) return msg.send("Friend! You can't pay more than what you have!");
+    if(amount < 1) return msg.send("Friend! Why would you pay nothing?");
+    if(amount > Number.MAX_SAFE_INTEGER) return msg.send("Friend! That amount is too high!");
 
     await member.syncSettings();
     await msg.member.takePoints(amount);

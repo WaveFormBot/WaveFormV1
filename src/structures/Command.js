@@ -67,7 +67,7 @@ class Command extends Base {
     if(!user && defaultToAuthor) return msg.author;
     if(!user) throw "What do you expect me to do without a user mention or an ID?";
     const match = /^(?:<@!?)?(\d{17,19})>?$/.exec(user);
-    if(!match) throw "Baka! That's not a user mention or an ID. What were you trying to do?";
+    if(!match) throw "Friend! That's not a user mention or an ID. What were you trying to do?";
     user = await this.client.users.fetch(match[1]).catch(() => null);
     // We will assume they gave IDs as mentions are highly unlikely to fail.
     if(!user) throw "I couldn't find that user! Make sure the ID is correct.";
@@ -97,7 +97,7 @@ class Command extends Base {
 
   verifyRole(msg, rolename, optional = false) {
     if(!rolename && optional) return null;
-    if(!rolename) throw "Baka! You must provide a role name or ID.";
+    if(!rolename) throw "Friend! You must provide a role name or ID.";
     rolename = rolename.toLowerCase();
 
     // We check by ID or name. Nobody mentions roles for an argument.
@@ -112,7 +112,7 @@ class Command extends Base {
   verifyInt(num, def) {
     if(typeof def === "number" && !num) return def;
     const parsed = parseInt(num && num.replace(/,/g, ""));
-    if(isNaN(parsed)) throw "Baka! You must provide a valid number.";
+    if(isNaN(parsed)) throw "Friend! You must provide a valid number.";
     return parsed;
   }
 

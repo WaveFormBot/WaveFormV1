@@ -10,7 +10,7 @@ class Zalgo extends Command {
   }
 
   async run(msg, args) {
-    if(!args.length) return msg.send("Baka! You must give me an argument!");
+    if(!args.length) return msg.send("Friend! You must give me an argument!");
 
     const text = args.join(" ");
     if(text.length > 180) return msg.send("Cannot use more than 180 characters. While the Discord limit is 2000 characters the zalgo characters also add up extra characters. 180 characters is in fact already 1980 characters with this command.");

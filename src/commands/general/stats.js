@@ -22,7 +22,7 @@ class Stats extends Command {
       `${seconds} Seconds`].filter((time) => !time.startsWith("0")).join(", ");
 
     return msg.send(this.client.embed()
-      .setTitle("Miyako - Bot Statistics")
+      .setTitle("WaveForm - Bot Statistics")
         .setDescription("Hey! i'm WaveForm! A bot heavily recoded by Allen K.#7284 and Captiosus#4658")
       .setAuthor(this.client.user.tag, this.client.user.displayAvatarURL({ size: 64 }))
       .addField("Bot Stats", [

@@ -13,7 +13,7 @@ class YouTube extends Command {
   }
 
   async run(msg, args) {
-    if(!args.length) return msg.send("Baka! What do you want me to search?");
+    if(!args.length) return msg.send("Friend! What do you want me to search?");
 
     const url = await fetch(`https://www.youtube.com/results?search_query=${encodeURIComponent(args.join(" "))}`)
       .then((res) => res.text())

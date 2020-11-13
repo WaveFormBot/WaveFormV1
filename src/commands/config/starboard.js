@@ -12,7 +12,7 @@ class Starboard extends Command {
   }
 
   async run(msg, [action, amount]) {
-    if(!action) return msg.send("Baka! Specify one of `enable #channel`, `disable` or `limit <amount>`");
+    if(!action) return msg.send("Friend! Specify one of `enable #channel`, `disable` or `limit <amount>`");
 
     if(action === "disable") {
       await msg.guild.update({ starboard: { channel: null } });
@@ -20,7 +20,7 @@ class Starboard extends Command {
     }
 
     if(action === "enable") {
-      if(!msg.mentions.channels.size) return msg.send("Baka! Specify the channel you want to enable it on.");
+      if(!msg.mentions.channels.size) return msg.send("Friend! Specify the channel you want to enable it on.");
       const channel = msg.mentions.channels.first();
       await msg.guild.update({ starboard: { channel: channel.id } });
       return msg.send(`Successfully enabled the server starboard for the channel ${channel}`);
@@ -28,13 +28,13 @@ class Starboard extends Command {
 
     if(action === "limit") {
       amount = this.verifyInt(amount);
-      if(amount < 1) return msg.send("Baka! Limit cannot be less than 1");
-      if(amount > msg.guild.memberCount) return msg.send("Baka! Limit cannot be more than the amount of members in the server.");
+      if(amount < 1) return msg.send("Friend! Limit cannot be less than 1");
+      if(amount > msg.guild.memberCount) return msg.send("Friend! Limit cannot be more than the amount of members in the server.");
       await msg.guild.update({ starboard: { limit: amount } });
       return msg.send(`Successfully updated the starboard star limit to ${amount}`);
     }
 
-    return msg.send("Baka! Invalid action. Specify one of `enable #channel`, `disable` or `limit <amount>`");
+    return msg.send("Friend! Invalid action. Specify one of `enable #channel`, `disable` or `limit <amount>`");
   }
 }
 

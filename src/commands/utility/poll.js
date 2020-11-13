@@ -25,10 +25,10 @@ class Poll extends Command {
       channel = msg.channel;
     }
 
-    if(!args.length) return msg.send(`Baka! You need to provide me arguments. Usage: \`${msg.guild.settings.prefix}${this.usage}\``);
+    if(!args.length) return msg.send(`Friend! You need to provide me arguments. Usage: \`${msg.guild.settings.prefix}${this.usage}\``);
 
     // if(!channel.postable) throw "I cannot send message in that channel.";
-    if(!channel.permissionsFor(msg.member).has("SEND_MESSAGES")) return msg.send("Baka! You can't post in that channel.");
+    if(!channel.permissionsFor(msg.member).has("SEND_MESSAGES")) return msg.send("Friend! You can't post in that channel.");
     choices = args.join(" ").split("|");
     const question = choices.shift();
     if(choices.length < 2) return msg.send("Not enough choices, seperate choices with |, i.e `poll #polls Do you want to play fortnite? | Yes | No`, channel is optional and defaults to current channel.");

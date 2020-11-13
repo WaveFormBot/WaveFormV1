@@ -20,19 +20,19 @@ class UserPrefix extends Command {
 
   async add(msg, args) {
     if(msg.author.settings.prefix && msg.author.settings.prefix.length >= 10)
-      return msg.send("Baka! You can't have more than 10 prefixes. Remove some before trying again.");
+      return msg.send("Friend! You can't have more than 10 prefixes. Remove some before trying again.");
     
     const prefixInput = args.join(" ").toLowerCase();
-    if(!prefixInput) return msg.send("Baka! You must provide a prefix.");
+    if(!prefixInput) return msg.send("Friend! You must provide a prefix.");
 
     // User prefixes get an extra 5 chars compared to guild prefixes.
-    if(prefixInput.length > 15) return msg.send("Baka! Prefix cannot be longer than 15 characters!");
+    if(prefixInput.length > 15) return msg.send("Friend! Prefix cannot be longer than 15 characters!");
 
     // Get existing prefixes to append to.
     const prefix = msg.author.settings.prefix || [];
 
     // Avoid duplicates.
-    if(prefix.includes(prefixInput)) return msg.send("Baka! That prefix is already on the list.");
+    if(prefix.includes(prefixInput)) return msg.send("Friend! That prefix is already on the list.");
 
     prefix.push(prefixInput);
 
@@ -57,10 +57,10 @@ class UserPrefix extends Command {
       return msg.send("You don't have any prefixes to remove!");
 
     const prefixInput = args.join(" ").toLowerCase();
-    if(!prefixInput) return msg.send("Baka! You must provide a prefix to remove!");
+    if(!prefixInput) return msg.send("Friend! You must provide a prefix to remove!");
 
     const prefix = msg.author.settings.prefix;
-    if(!prefix.includes(prefixInput)) return msg.send("Baka! That prefix is not in your list.");
+    if(!prefix.includes(prefixInput)) return msg.send("Friend! That prefix is not in your list.");
 
     prefix.splice(prefix.indexOf(prefixInput), 1);
 

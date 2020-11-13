@@ -13,7 +13,7 @@ class HttpStatus extends Command {
 
   async run(msg, [status]) {
     // 599 isn't standard i think, not in Node.js but it's on http.cat so let's handle it.
-    if(status !== "599" && !STATUS_CODES[status]) return msg.send("Baka! That's an invalid http status code.");
+    if(status !== "599" && !STATUS_CODES[status]) return msg.send("Friend! That's an invalid http status code.");
     return msg.send(this.client.embed()
       .setTitle("HTTP Cat")
       .setImage(`https://http.cat/${status}.jpg`)

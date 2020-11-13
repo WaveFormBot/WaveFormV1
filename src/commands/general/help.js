@@ -27,7 +27,7 @@ class Help extends Command {
       }
 
       if(cmd.nsfw && (msg.guild && !msg.channel.nsfw))
-        return msg.send("Baka! You can't view details of that command in a non NSFW channel.");
+        return msg.send("Friend! You can't view details of that command in a non NSFW channel.");
 
       return msg.send(this.client.embed(this.client.user)
         .setTitle(`Help for command ${cmd.name}`)
@@ -55,7 +55,7 @@ class Help extends Command {
 
     const embed = this.client.embed(this.client.user)
       .setTitle("Help - Commands")
-      .setDescription("Join our [Discord Server](https://discord.gg/mDkMbEh) for support and updates!")
+      .setDescription("Join our [Discord Server](https://discord.gg/fAM2dJtfx7) for support and updates!")
       .setFooter("For more information about a command run w!help <command>");
 
     // Sort the categories alphabetically.

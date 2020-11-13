@@ -15,7 +15,7 @@ class RandomReddit extends Command {
   }
 
   async run(msg, [subreddit]) {
-    if(!subreddit) return msg.send("Baka! You must provide a subreddit to fetch from.");
+    if(!subreddit) return msg.send("Friend! You must provide a subreddit to fetch from.");
 
     const data = await fetch(`https://www.reddit.com/r/${subreddit}/random.json`)
       .then((res) => res.json())

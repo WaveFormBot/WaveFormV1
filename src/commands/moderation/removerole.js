@@ -15,7 +15,7 @@ class RemoveRole extends Command {
   async run(msg, [member, ...rolename]) {
     member = await this.verifyMember(msg, member);
     rolename = rolename.join(" ");
-    if(!rolename) return msg.send("Baka! You must provide a role to remove.");
+    if(!rolename) return msg.send("Friend! You must provide a role to remove.");
 
     const role = msg.guild.roles.cache.find((role) => (role.id === rolename) || (role.name.toLowerCase() === rolename.toLowerCase()));
 

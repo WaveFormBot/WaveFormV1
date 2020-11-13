@@ -12,7 +12,7 @@ class Tweet extends Command {
   }
 
   async run(msg, args) {
-    if(!args.length) return msg.send("Baka! What am I supposed to tweet?");
+    if(!args.length) return msg.send("Friend! What am I supposed to tweet?");
 
     const text = args.join(" ");
 

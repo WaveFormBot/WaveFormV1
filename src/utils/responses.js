@@ -6,7 +6,7 @@
 // Member Join
 exports.welcomeMessages = [
   "O-ohayou gozaimasu **{{user}}-san**.",
-  "Hmph, looks like **{{user}}**, another baka, has joined.",
+  "Hmph, looks like **{{user}}**, another Friend, has joined.",
   "It's not like I like you or anything... but welcome to the server **{{user}}**.",
   "O-oh, welcome **{{user}}-san**. I hope I haven't embarrased you...",
   "OwO who's this? **{{user}}** has joined the server.",
@@ -21,14 +21,14 @@ exports.welcomeMessages = [
 // Member Leave
 exports.goodbyeMessages = [
   "Awh, I-I have no words for t-this, b-but, I-I'll miss you **{{user}}-san**!",
-  "Awh, **{{user}}** has left... n-not that I care! Baka!",
+  "Awh, **{{user}}** has left... n-not that I care! Friend!",
   "**{{user}}-san**.... N-no...",
   "**{{user}}** left, not like we needed them or anything.",
   "**{{user}}** why would you leave me here, alone!?",
   "**{{user}}** discovered the leave button.",
-  "Eep! **{{user}}** left?! Th-they're always leaving me, that baka...",
+  "Eep! **{{user}}** left?! Th-they're always leaving me, that Friend...",
   "Finally, I thought **{{user}}** would never leave!",
-  "Woah! **{{user}}** left **{{guild}}**! B-baka, why did they even join?!",
+  "Woah! **{{user}}** left **{{guild}}**! B-Friend, why did they even join?!",
   "Woo, **{{user}}** left, now I only have to handle **{{amount}}** users!"
 ];
 
@@ -36,24 +36,24 @@ exports.goodbyeMessages = [
 exports.levelUpMessages = [
   "You've only become level **{{level}}**, peasant!",
   "YATTA! You leveled up, **{{user}}-san**! You're now level **{{level}}**, n-not that it means a-anything!",
-  "E-eh? You leveled up? Well just because you're level **{{level}}** now, doesn't mean I'll like you more **{{user}}**... baka.",
+  "E-eh? You leveled up? Well just because you're level **{{level}}** now, doesn't mean I'll like you more **{{user}}**... Friend.",
   "Hmph, you leveled up to **{{level}}**, **{{user}}-san**. W-well, it makes no difference to me!",
   "Hyaa~! You've leveled up **{{user}}-san**, you're now level **{{level}}**.",
-  "**{{user}}**, you baka. Don't leave me behind now that you're level **{{level}}**.",
+  "**{{user}}**, you Friend. Don't leave me behind now that you're level **{{level}}**.",
   "**{{user}}-san**, don't forget me now just because you're level **{{level}}**",
   "Pfft, you've only just become level **{{level}}**, hurry up **{{user}}**.",
   "Ah nuts, **{{user}}** is getting smart, now with an I.Q. of **{{level}}**",
   "N-nani? You've reached level **{{level}}** so quickly...",
   "You're only level **{{level}}**? You disgust me!",
-  "How can you be level **{{level}}** y-you baka!",
-  "B-baka! You're at level **{{level}}**, now go be free! D-dummy...",
-  "You're definitely level **{{level}}** you baka!",
+  "How can you be level **{{level}}** y-you Friend!",
+  "B-Friend! You're at level **{{level}}**, now go be free! D-dummy...",
+  "You're definitely level **{{level}}** you Friend!",
 ];
 
 // Commands
 exports.pingMessages = [
   "Ugh, again? You always ask, and I tell you that I responded in **{{ms}}ms**.",
-  "B-baka, I responded... just in **{{ms}}ms**.",
+  "B-Friend, I responded... just in **{{ms}}ms**.",
   "H-here you go, I responded in **{{ms}}ms**.",
   "Here you go, not that it was worth my time. It only took me **{{ms}}ms**.",
   "Is this right? I've responded in **{{ms}}ms**.",
@@ -66,7 +66,7 @@ exports.pingMessages = [
   "You've made me **{{ms}}ms** older - just from asking.",
   "**{{user}}** I've seen your message and it took me **{{ms}}ms** not to care.",
   "Do you know how long it took me to read that message? You pretty much wasted **{{ms}}ms** of my day!",
-  "B-baka! My ping is **{{ms}}ms**! Are you happy now?"
+  "B-Friend! My ping is **{{ms}}ms**! Are you happy now?"
 ];
 
 exports.dailySuccessMessages = [
@@ -108,7 +108,7 @@ exports.otherBalanceMessages = [
 exports.levelMessages = [
   "You're only level **{{level}}**, Not bad...",
   "Pfft, level **{{level}}**?",
-  "**{{user}}** your level? It's **{{level}}**, baka",
+  "**{{user}}** your level? It's **{{level}}**, Friend",
   "**{{user}}**, again with this? Whatever, you're level **{{level}}**.",
   "**{{user}}-san** here you go, it's **{{level}}**.",
   "You're level **{{level}}**, maybe if you were a wee bit more active it'd be higher.",
@@ -127,17 +127,17 @@ exports.otherLevelMessages = [
 // Reload
 exports.reloadMissingArg = [
   "N-nani?! I don't know what to do, you didn't give me anything!",
-  "Baka! You are supposed to provide a command to reload!"
+  "Friend! You are supposed to provide a command to reload!"
 ];
 
 exports.reloadNotFound = [
   "Eeeh?! **{{user}}-san**, why would you ask me to find a command that doesn't exist, it wasn't even an alias.",
-  "What are you doing? **{{command}}** doesn't exist! Baka!"
+  "What are you doing? **{{command}}** doesn't exist! Friend!"
 ];
 
 exports.reloadErrUnload = [
   "**{{user}}-san**, I think I broke it... This happened: **{{response}}**",
-  "There was an error, probably your fault! Baka! **{{response}}**"
+  "There was an error, probably your fault! Friend! **{{response}}**"
 ];
 
 exports.reloadErrLoad = [
@@ -155,7 +155,7 @@ exports.reloadSuccess = [
 // Errors
 
 exports.notNSFWChannel = [
-  "Baka! What do you think you're doing? That command can only be used in NSFW channels.",
+  "Friend! What do you think you're doing? That command can only be used in NSFW channels.",
   "N-nani? Is this really the place to do that? That command can only be used in NSFW channels."
 ];
 

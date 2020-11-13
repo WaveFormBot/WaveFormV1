@@ -10,7 +10,7 @@ class Reverse extends Command {
   }
   
   async run(msg, args) {
-    if(!args.length) return msg.send("Baka! What am I supposed to reverse?");
+    if(!args.length) return msg.send("Friend! What am I supposed to reverse?");
     return msg.send(args.join(" ").split("").reverse().join(""));
   }
 }

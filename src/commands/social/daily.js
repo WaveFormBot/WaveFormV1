@@ -21,7 +21,7 @@ class Daily extends Command {
         .replace(/{{time}}/g, this.client.utils.getDuration(msg.member.settings.daily - Date.now())));
 
     if(member.id !== msg.member.id) {
-      if(member.user.bot) throw "Baka! You can't give your daily points to a bot!";
+      if(member.user.bot) throw "Friend! You can't give your daily points to a bot!";
       await this.setCooldown(msg);
       await member.syncSettings();
       await member.givePoints(750);

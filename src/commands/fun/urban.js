@@ -17,7 +17,7 @@ class Urban extends Command {
   
   async run(msg, args) {
     const [query, ind = 1] = args.join(" ").split(", ");
-    if(isNaN(parseInt(ind))) return msg.send("Baka! Page must be a number.");
+    if(isNaN(parseInt(ind))) return msg.send("Friend! Page must be a number.");
     const index = ind - 1;
     if(index < 0) return msg.send("The number cannot be zero or negative.");
     

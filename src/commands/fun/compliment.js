@@ -10,7 +10,7 @@ class Compliment extends Command {
 
   async run(msg, [member]) {
     const user = await this.verifyUser(msg, member, true);
-    if(user.id === this.client.user.id) return msg.send("Thanks but you don't have to ask me to compliment myself. Baka!");
+    if(user.id === this.client.user.id) return msg.send("Thanks but you don't have to ask me to compliment myself. Friend!");
     return msg.send(`${user}: ${compliments[Math.floor(Math.random() * compliments.length)]}`);
   }
 }
