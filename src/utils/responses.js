@@ -34,39 +34,30 @@ exports.goodbyeMessages = [
 
 // Level Up
 exports.levelUpMessages = [
-  "You've only become level **{{level}}**, peasant!",
-  "YATTA! You leveled up, **{{user}}-san**! You're now level **{{level}}**, n-not that it means a-anything!",
-  "E-eh? You leveled up? Well just because you're level **{{level}}** now, doesn't mean I'll like you more **{{user}}**... Friend.",
-  "Hmph, you leveled up to **{{level}}**, **{{user}}-san**. W-well, it makes no difference to me!",
+  "Friend! You leveled up, **{{user}}-san**! You're now level **{{level}}**",
+  "You leveled up? SAY WHAT?! **{{level}}**",
+  "Wow, you leveled up to **{{level}}**, **{{user}}-san**. W-well, it makes a ton difference to me!",
   "Hyaa~! You've leveled up **{{user}}-san**, you're now level **{{level}}**.",
-  "**{{user}}**, you Friend. Don't leave me behind now that you're level **{{level}}**.",
+  "**{{user}}**, Oh no Friend. Don't leave me behind now that you're level **{{level}}**.",
   "**{{user}}-san**, don't forget me now just because you're level **{{level}}**",
-  "Pfft, you've only just become level **{{level}}**, hurry up **{{user}}**.",
-  "Ah nuts, **{{user}}** is getting smart, now with an I.Q. of **{{level}}**",
-  "N-nani? You've reached level **{{level}}** so quickly...",
-  "You're only level **{{level}}**? You disgust me!",
-  "How can you be level **{{level}}** y-you Friend!",
-  "B-Friend! You're at level **{{level}}**, now go be free! D-dummy...",
-  "You're definitely level **{{level}}** you Friend!",
+  "Amazing! your at **{{level}}** Very good!",
+  "Hey Friend! You're at level **{{level}}**, now go be free!",
+  "You're definitely level **{{level}}** Friend!"
 ];
 
 // Commands
 exports.pingMessages = [
-  "Ugh, again? You always ask, and I tell you that I responded in **{{ms}}ms**.",
-  "B-Friend, I responded... just in **{{ms}}ms**.",
-  "H-here you go, I responded in **{{ms}}ms**.",
-  "Here you go, not that it was worth my time. It only took me **{{ms}}ms**.",
+  "I responded in **{{ms}}ms**.",
+  "Friend, I responded... just in **{{ms}}ms**.",
+  "Here you go, I responded in **{{ms}}ms**.",
   "Is this right? I've responded in **{{ms}}ms**.",
   "**{{user}}**? I've responded in **{{ms}}ms**.",
   "**{{user}}**! You wasted **{{ms}}ms** of my time, ERGH",
-  "D-did I do it right? I responded in **{{ms}}ms**.",
+  "Did I do it right? I responded in **{{ms}}ms**.",
   "**{{user}}**, yes I'm here, and it took me **{{ms}}ms** to respond!",
-  "**{{user}}** why are you pinging me man! You wasted **{{ms}}ms** of my time!!",
-  "**{{user}}** hey, it took me **{{ms}}ms** to send this message",
+  "**{{user}}** Hi Friend! it took me **{{ms}}ms** to send this message",
   "You've made me **{{ms}}ms** older - just from asking.",
-  "**{{user}}** I've seen your message and it took me **{{ms}}ms** not to care.",
-  "Do you know how long it took me to read that message? You pretty much wasted **{{ms}}ms** of my day!",
-  "B-Friend! My ping is **{{ms}}ms**! Are you happy now?"
+  "**{{user}}** I've seen your message and it took me **{{ms}}ms** to respond."
 ];
 
 exports.dailySuccessMessages = [
