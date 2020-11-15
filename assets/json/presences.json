@@ -17,7 +17,7 @@
   },
   {
     "type": "LISTENING",
-    "message": "{{guilds}} servers"
+    "message": "@WaveForm help | {{guilds}} servers"
   },
   {
     "type": "WATCHING",
@@ -32,8 +32,8 @@
     "message": "invite me using w!invite"
   },
   {
-    "type": "PLAYING",
-    "message": "bring your life to a reality."
+    "type": "WATCHING",
+    "message": "everyone having a fun time!"
   },
   {
     "type": "PLAYING",

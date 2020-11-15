@@ -1,4 +1,4 @@
-// Note: These are taken from https://github.com/NotAWeebDev/Misaki
+﻿// Note: These are taken from https://github.com/NotAWeebDev/Misaki
 // The bot has died but I really liked those responses and my own creativity is trash.
 // TODO: Currently it's directly pasted from Misaki, modify a few things and remove ones we don't need.
 // - Removed a few responses we don't need but still have to add a few more responses to feel a bit unique.
@@ -47,15 +47,14 @@ exports.levelUpMessages = [
 
 // Commands
 exports.pingMessages = [
-  "I responded in **{{ms}}ms**.",
-  "Friend, I responded... just in **{{ms}}ms**.",
+  "I responded in **{{ms}}ms** .",
+  "Hi Friend!  I responded... just in **{{ms}}ms**.",
   "Here you go, I responded in **{{ms}}ms**.",
-  "Is this right? I've responded in **{{ms}}ms**.",
+  "Is this right? I've responded in **{{ms}}ms** .",
   "**{{user}}**? I've responded in **{{ms}}ms**.",
-  "**{{user}}**! You wasted **{{ms}}ms** of my time, ERGH",
   "Did I do it right? I responded in **{{ms}}ms**.",
   "**{{user}}**, yes I'm here, and it took me **{{ms}}ms** to respond!",
-  "**{{user}}** Hi Friend! it took me **{{ms}}ms** to send this message",
+  "**{{user}}** Hi Friend!  it took me **{{ms}}ms** to send this message",
   "You've made me **{{ms}}ms** older - just from asking.",
   "**{{user}}** I've seen your message and it took me **{{ms}}ms** to respond."
 ];

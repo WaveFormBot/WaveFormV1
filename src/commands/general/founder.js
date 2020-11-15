@@ -4,7 +4,7 @@ const { version } = require("discord.js");
 class Founder extends Command {
   constructor(...args) {
     super(...args, {
-      description: "View bot statistics and information.",
+      description: "View who the founders of the WaveForm Bot",
       aliases: ["info"]
     });
   }
@@ -21,15 +21,11 @@ class Founder extends Command {
       `${minutes} Minutes`,
       `${seconds} Seconds`].filter((time) => !time.startsWith("0")).join(", ");
 
-    return msg.send(this.client.embed()
-      .setTitle("WaveForm - Bot Founders")
-        .setDescription("Hey! i'm WaveFormSUS! A bot heavily recoded by Allen K.#7284 and Captiosus#4658")
-      .setAuthor(this.client.user.tag, this.client.user.displayAvatarURL({ size: 64 }))
-      .setImage()
-      .addField("Bot Stats", [
-        `**Allen K.#7284**`,
-        ``,
-      ].join("\n")))         
+      return msg.send(this.client.embed()
+          .setTitle("These are my owners! Be nice to them.")
+          .setAuthor(this.client.user.tag, this.client.user.displayAvatarURL({ size: 64 }))
+          .setImage('https://i.imgur.com/qla8OHZ.png'))
+      
   }
 }
 
