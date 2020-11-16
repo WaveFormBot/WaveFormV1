@@ -32,7 +32,7 @@ class Achievement extends Command {
             .attachFiles(attachment)
             .setImage("attachment://achievement.png")
 
-        return message.channel.send(embed)
+        return msg.channel.send(embed)
     }
 }
 
