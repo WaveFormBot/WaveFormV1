@@ -14,8 +14,8 @@ class Bed extends Command {
     async run(msg, [user]) {
         user = await this.verifyUser(msg, user, true);
 
-        const img = await this.client.img.bobross(user.displayAvatarURL({ size: 128, format: "png" }));
-        const attachment = new MessageAttachment(img, "bobross.png");
+        const img = await this.client.img.bed(user.displayAvatarURL({ size: 128, format: "png" }));
+        const attachment = new MessageAttachment(img, "bed.png");
 
         const embed = new MessageEmbed()
             .setColor('#7D98F9')
