@@ -22,7 +22,7 @@ class Beautiful extends Command {
           .attachFiles(attachment)
           .setImage("attachment://beautiful.png")
 
-      return message.channel.send(embed)
+      return msg.channel.send(embed)
   }
 }
 
