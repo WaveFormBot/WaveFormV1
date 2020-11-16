@@ -1,5 +1,5 @@
 const Command = require("../../structures/Command.js");
-const { MessageAttachment } = require("discord.js");
+const { MessageAttachment, MessageEmbed } = require("discord.js");
 
 class Bed extends Command {
   constructor(...args) {
@@ -11,14 +11,18 @@ class Bed extends Command {
     });
   }
 
-  async run(msg, [user, another]) {
-    user = await this.verifyUser(msg, user);
-    another = await this.verifyUser(msg, another, true);
+    async run(msg, [user]) {
+        user = await this.verifyUser(msg, user, true);
 
-    const img = await this.client.img.bed(user.displayAvatarURL({ size: 128, format: "png" }),
-      another.displayAvatarURL({ size: 128, format: "png" }));
+        const img = await this.client.img.bed(user.displayAvatarURL({ size: 256, format: "png" }));
+        const attachment = new MessageAttachment(img, "bed.png");
 
-    return msg.send(new MessageAttachment(img, "bed.png"));
+        const embed = new MessageEmbed()
+            .setColor('#7D98F9')
+            .attachFiles(attachment)
+            .setImage("attachment://bed.png")
+
+        return msg.channel.send(embed)
   }
 }
 
