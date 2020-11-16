@@ -1,5 +1,5 @@
 const Command = require("../../structures/Command.js");
-const { MessageAttachment } = require("discord.js");
+const { MessageAttachment, MessageEmbed } = require("discord.js");
 
 class Bobross extends Command {
   constructor(...args) {
@@ -13,9 +13,15 @@ class Bobross extends Command {
   async run(msg, [user]) {
     user = await this.verifyUser(msg, user, true);
 
-    const img = await this.client.img.bobross(user.displayAvatarURL({ size: 512, format: "png" }));
+      const img = await this.client.img.bobross(user.displayAvatarURL({ size: 256, format: "png" }));
+      const attachment = new MessageAttachment(img, "bobross.png");
 
-    return msg.send(new MessageAttachment(img, "bobross.png"));
+      const embed = new MessageEmbed()
+          .setColor('#7D98F9')
+          .attachFiles(attachment)
+          .setImage("attachment://bobross.png")
+
+      return msg.channel.send(embed)
   }
 }
 
