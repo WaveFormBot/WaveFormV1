@@ -1,5 +1,5 @@
 const Command = require("../../structures/Command.js");
-const { MessageAttachment } = require("discord.js");
+const { MessageAttachment, MessageEmbed } = require("discord.js");
 
 class Beautiful extends Command {
   constructor(...args) {
