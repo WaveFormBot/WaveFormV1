@@ -30,5 +30,4 @@ require("./src/extensions/User.js");
 const MiyakoClient = require("./src/structures/MiyakoClient.js");
 
 // Login. (And start in development mode if --dev is passed)
-new MiyakoClient(process.argv.includes("--dev")).login
-
+new MiyakoClient(process.argv.includes("--dev")).login();
