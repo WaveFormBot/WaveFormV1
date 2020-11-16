@@ -11,13 +11,19 @@ class Beautiful extends Command {
     });
   }
 
-  async run(msg, [user]) {
-    user = await this.verifyUser(msg, user, true);
+    async run(msg, [user]) {
+        user = await this.verifyUser(msg, user, true);
 
-    const img = await this.client.img.beautiful(user.displayAvatarURL({ size: 256, format: "png" }));
+        const img = await this.client.img.achievement(user.displayAvatarURL({ size: 64, format: "png" }), text);
+        const attachment = new MessageAttachment(img, "beautiful.png");
 
-    return msg.send(new MessageAttachment(img, "beautiful.png"));
-  }
+        const embed = new MessageEmbed()
+            .setColor('#7D98F9')
+            .attachFiles(attachment)
+            .setImage("attachment://beautiful.png")
+
+        return msg.channel.send(embed)
+    }
 }
 
 module.exports = Beautiful;
