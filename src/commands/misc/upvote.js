@@ -21,7 +21,7 @@ class Upvote extends Command {
         `${seconds} Seconds`].filter((time) => !time.startsWith("0")).join(", ");
 
         return msg.send(this.client.embed()
-            .setTitle("Hey Friend! Please upvote me on top.gg!")
+            .setTitle("Hey Friends! Please upvote me on top.gg!")
             .setDescription('***https://top.gg/bot/775870714024558602***')
             .setAuthor(this.client.user.tag, this.client.user.displayAvatarURL({ size: 64 }))
             .setImage('https://i.imgur.com/iZU23p3.png'))
