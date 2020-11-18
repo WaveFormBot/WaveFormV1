@@ -1,7 +1,5 @@
 {
-  "prefix": "!",
-  "discord_owner_id": "Your-Discord-ID",
-  "token": "Your-Bot-Token",
+  "discord_owner_id": "239817206685368321",
   "tenorAPI": "tenor-API-key",
   "newsAPI": "news-api-key",
   "youtubeAPI": "AIzaSyCbFKbzWyRexbWmrH67nqYOK9hsgfQWZaY",
