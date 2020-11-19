@@ -18,7 +18,7 @@ class Points extends Command {
     return msg.send(this.client.utils.random(member.id === msg.author.id ?
       this.client.responses.balanceMessages : this.client.responses.otherBalanceMessages)
       .replace(/{{user}}/g, member.displayName)
-      .replace(/{{amount}}/g, `¥${parseInt(member.settings.points).toLocaleString()}`));
+      .replace(/{{amount}}/g, `$${parseInt(member.settings.points).toLocaleString()}`));
   }
 }
 

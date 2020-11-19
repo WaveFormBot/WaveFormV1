@@ -4,7 +4,7 @@ class Store extends Command {
   constructor(...args) {
     super(...args, {
       description: "Buy/Sell Roles in exchange for social currency.",
-      extendedHelp: "Examples:\n  **w!store add 1000 VIP** (sell VIP role for ¥1000)\n  **w!store add 0 Cool Guy** (Sell the Cool Guy role for free)\n  **w!store buy VIP** (buy the role.)\n  **w!store sell VIP** (sell and remove the role for a 50% refund)",
+      extendedHelp: "Examples:\n  **w!store add 1000 VIP** (sell VIP role for $1000)\n  **w!store add 0 Cool Guy** (Sell the Cool Guy role for free)\n  **w!store buy VIP** (buy the role.)\n  **w!store sell VIP** (sell and remove the role for a 50% refund)",
       usage: "store <add|sell|buy|delete|view:default> <role>",
       guildOnly: true,
       aliases: ["shop"],
@@ -40,7 +40,7 @@ class Store extends Command {
     await msg.member.roles.remove(role);
     if(refund !== 0) await msg.member.givePoints(refund);
 
-    return msg.send(`Successfully sold the role **${role.name}** for **¥${refund.toLocaleString()}** refund.`);
+    return msg.send(`Successfully sold the role **${role.name}** for **$${refund.toLocaleString()}** refund.`);
   }
 
   async buy(msg, args) {
@@ -58,7 +58,7 @@ class Store extends Command {
     const price = parseInt(store.price);
 
     if(msg.member.points < price)
-      return msg.send(`Friend! You only have **¥${msg.member.points.toLocaleString()}**, but the role costs: **¥${price.toLocaleString()}**`);
+      return msg.send(`Friend! You only have **$${msg.member.points.toLocaleString()}**, but the role costs: **$${price.toLocaleString()}**`);
 
     if(role.position > msg.guild.me.roles.highest.position)
       return msg.send("I cannot add that role to you! My role position must be higher than the role you are trying to buy.");
@@ -66,7 +66,7 @@ class Store extends Command {
     await msg.member.roles.add(role);
     if(price !== 0) await msg.member.takePoints(price);
 
-    return msg.send(`Successfully bought the role **${role.name}** for **¥${price.toLocaleString()}**`);
+    return msg.send(`Successfully bought the role **${role.name}** for **$${price.toLocaleString()}**`);
   }
 
   async delete(msg, args) {
@@ -116,7 +116,7 @@ class Store extends Command {
 
     // Add it.
     await this.client.settings.store.update(role.id, { price, guild: msg.guild.id });
-    return msg.send(`Success! **${role.name}** is now on sale for **¥${price.toLocaleString()}**`);
+    return msg.send(`Success! **${role.name}** is now on sale for **$${price.toLocaleString()}**`);
   }
 
   async view(msg) {
@@ -130,7 +130,7 @@ class Store extends Command {
     // Filter non-existent roles and create a view.
     const view = roles.filter((r) => msg.guild.roles.cache.has(r.id)).map((r) => {
       const role = msg.guild.roles.cache.get(r.id);
-      const price = parseInt(r.price) === 0 ? "FREE" : `¥${parseInt(r.price).toLocaleString()}`;
+      const price = parseInt(r.price) === 0 ? "FREE" : `$${parseInt(r.price).toLocaleString()}`;
       const has = msg.member.roles.cache.has(r.id);
       
       return `❯ ${role.name}${" ".repeat(20 - role.name.length)}:: ${price}${has ? " :: ✓" : ""}`;

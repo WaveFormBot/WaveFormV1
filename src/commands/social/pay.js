@@ -25,7 +25,7 @@ class Pay extends Command {
     await msg.member.takePoints(amount);
     await member.givePoints(amount);
 
-    return msg.send(`Paid **¥${amount.toLocaleString()}** to **${member.displayName}**`);
+    return msg.send(`Paid **$${amount.toLocaleString()}** to **${member.displayName}**`);
   }
 }
 

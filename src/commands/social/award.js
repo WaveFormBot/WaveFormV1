@@ -23,7 +23,7 @@ class Award extends Command {
     if(amount === 0) return msg.send("Friend! Why would you pay them nothing?");
 
     // Guard against abuse. We have to be careful not to let users add infinite points and overflow the database.
-    if(amount >= 100000) return msg.send("You can't reward more than **¥100,000** at a time.");
+    if(amount >= 100000) return msg.send("You can't reward more than **$100,000** at a time.");
 
     await member.syncSettings();
 
@@ -33,7 +33,7 @@ class Award extends Command {
 
     await member.givePoints(amount);
 
-    return msg.send(`Successfully rewarded **¥${amount.toLocaleString()}** to ${member}`);
+    return msg.send(`Successfully rewarded **$${amount.toLocaleString()}** to ${member}`);
   }
 }
 

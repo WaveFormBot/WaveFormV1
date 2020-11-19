@@ -18,8 +18,8 @@ class Slots extends Command {
     const { win, view, reward } = slots();
 
     const embed = this.client.embed()
-      .setTitle("Miyako Slots")
-      .setColor(0xff0000)
+      .setTitle("Waveform Slots")
+        .setColor(0x7D98F9)
       .setDescription(view)
       .setAuthor(msg.author.tag, msg.author.displayAvatarURL({ size: 64 }));
 
@@ -33,7 +33,7 @@ class Slots extends Command {
         const points = voted ? reward * 2 : reward;
 
         // Make a message and remind them to vote if they haven't
-        message = `Congratulation! You won **¥${points}**`;
+        message = `Congrats! You won **${points}**`;
         if(!voted) message += `\nYou can get double the points by upvoting me here: <${this.store.get("upvote").url}>`;
 
         // Pay the user.
@@ -41,7 +41,7 @@ class Slots extends Command {
       } else {
         // If social system is disabled all we do is show a basic message.
         // Not fun without earning points but oh well.
-        message = "Congratulation! You won! However the Social Economy system was disabled for this server so I could not pay you!";
+        message = "Congrats! You won! However the Social Economy system was disabled for this server so I could not pay you!";
       }
     } else {
       // Lost Message.

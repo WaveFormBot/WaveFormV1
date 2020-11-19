@@ -30,7 +30,7 @@ class Deduct extends Command {
 
     await member.takePoints(amount);
 
-    return msg.send(`Successfully deducted **¥${amount.toLocaleString()}** from ${member}`);
+    return msg.send(`Successfully deducted **$${amount.toLocaleString()}** from ${member}`);
   }
 }
 

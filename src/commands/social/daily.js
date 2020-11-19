@@ -25,7 +25,7 @@ class Daily extends Command {
       await this.setCooldown(msg);
       await member.syncSettings();
       await member.givePoints(750);
-      return msg.send(`You have given your daily to **${member.displayName}**. As a bonus they get **¥750**`);
+      return msg.send(`You have given your daily to **${member.displayName}**. As a bonus they get **$750**`);
     }
 
     let amount = 500;
@@ -49,7 +49,7 @@ class Daily extends Command {
         await this.setCooldown(msg);
         return msg.send(this.client.utils.random(this.client.responses.dailySuccessMessages)
           .replace(/{{user}}/g, msg.member.displayName)
-          .replace(/{{amount}}/g, `¥${amount.toLocaleString()}`));
+          .replace(/{{amount}}/g, `$${amount.toLocaleString()}`));
       } else if(["no", "n", "cancel"].includes(response)) {
         return msg.send("Claim cancelled.");
       } else {
@@ -66,7 +66,7 @@ class Daily extends Command {
 
     return msg.send(this.client.utils.random(this.client.responses.dailySuccessMessages)
       .replace(/{{user}}/g, msg.member.displayName)
-      .replace(/{{amount}}/g, `¥${amount.toLocaleString()}`));
+      .replace(/{{amount}}/g, `$${amount.toLocaleString()}`));
   }
 
   setCooldown(msg) {

@@ -20,9 +20,9 @@ class Help extends Command {
 
         if(premium) {
           // Premium users get a 25% off the cost.
-          cost = `¥${cmd.cost - Math.floor(cmd.cost / 2 / 2)}`;
+          cost = `$${cmd.cost - Math.floor(cmd.cost / 2 / 2)}`;
         } else {
-          cost = `¥${cmd.cost}`;
+          cost = `$${cmd.cost}`;
         }
       }
 

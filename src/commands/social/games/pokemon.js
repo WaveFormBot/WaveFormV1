@@ -38,7 +38,7 @@ class Pokemon extends Command {
 
       if(msg.guild.settings.social) {
         await msg.member.givePoints(200);
-        points = " You got **¥200**";
+        points = " You got **$200**";
       }
 
       return msg.send(`Yatta! Well done, **${this.client.utils.toProperCase(pokemon.name)}** was correct.${points}`);

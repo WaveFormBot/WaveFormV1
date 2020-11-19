@@ -33,12 +33,12 @@ class Leaderboard extends Command {
     for(let i = 0; i < top.length; i++) {
       const u = top[i];
       const user = await this.client.users.fetch(u.id.split(".")[1]);
-      leaderboard.push(`- [${(page * 10 + (i + 1)).toString().padStart(2, "0")}] ❯ ${user.tag}\n    => ¥${parseInt(u.points).toLocaleString()}`);
+      leaderboard.push(`- [${(page * 10 + (i + 1)).toString().padStart(2, "0")}] ❯ ${user.tag}\n    => $${parseInt(u.points).toLocaleString()}`);
     }
     
     const pos = positions.indexOf(msg.author.id).toString().padStart(2, "0");
     const posTxt = pos == -1 ? "??" : (positions.indexOf(msg.author.id) + 1).toString().padStart(2, "0");
-    leaderboard.push(`\n+ [${posTxt}] ❯ ${msg.author.tag}\n    => ¥${parseInt(msg.member.settings.points).toLocaleString()}`);
+    leaderboard.push(`\n+ [${posTxt}] ❯ ${msg.author.tag}\n    => $${parseInt(msg.member.settings.points).toLocaleString()}`);
     return msg.send(`**__${msg.guild.name}__**'s Leaderboard (Page **${page + 1}** out of **${totalPages || 1}**)\n\`\`\`${leaderboard.join("\n")}\`\`\``);
   }
 }
