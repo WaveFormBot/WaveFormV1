@@ -101,7 +101,7 @@ class MiyakoClient extends Client {
    * @returns {MessageEmbed}
    */
   embed(user) {
-      const embed = new MessageEmbed().setColor(0x7D98F9);
+      const embed = new MessageEmbed().setColor(0x429EFF);
 
     if(user) embed.setAuthor(user.tag, user.displayAvatarURL({ size: 64 }));
 

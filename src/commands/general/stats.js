@@ -27,7 +27,7 @@ class Stats extends Command {
         .setAuthor(this.client.user.tag, this.client.user.displayAvatarURL({ size: 64 }))
         .setImage('https://i.imgur.com/Up8vyVb.png')
       .addField("Bot Stats", [
-        `**Guilds:** ${client.guilds.cache.size}`,
+        `**Servers:** ${client.guilds.cache.size}`,
         `**Users:** ${this.client.guilds.cache.reduce((sum, guild) => sum + (guild.available ? guild.memberCount : 0), 0)}`,
         `**Channels:** ${client.channels.cache.size}`,
         `**Uptime:** ${uptime}`,
@@ -43,10 +43,10 @@ class Stats extends Command {
         `**Commands Ran:** ${this.store.ran}`
       ].join("\n"))
       .addField("Links", [
-        ":robot: [Upvote me at top.gg](https://top.gg/bot/397796982120382464)",
+        ":robot: [Upvote me at top.gg](https://top.gg/bot/775870714024558602)",
           ":wave: [Check out our Website](https://waveform.me)",
-        ":envelope_with_arrow: [Invite me to your server](https://discordapp.com/oauth2/authorize?client_id=397796982120382464&permissions=2016537702&scope=bot)",
-        ":video_game: [Join our Discord Server](https://discord.gg/NasGzWnEQN)"
+        ":envelope_with_arrow: [Invite me to your server](https://discord.com/oauth2/authorize?client_id=775870714024558602&permissions=2016537702&scope=bot)",
+        ":video_game: [Join our Discord Server](https://discord.gg/GcyQSuzhfx)"
       ].join("\n")));
 
   }

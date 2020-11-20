@@ -17,7 +17,7 @@ class Bobross extends Command {
       const attachment = new MessageAttachment(img, "bobross.png");
 
       const embed = new MessageEmbed()
-          .setColor('#7D98F9')
+          .setColor('#429EFF')
           .attachFiles(attachment)
           .setImage("attachment://bobross.png")
 

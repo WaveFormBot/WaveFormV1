@@ -24,7 +24,7 @@ class Founder extends Command {
       return msg.send(this.client.embed()
           .setTitle("These are my owners! Be nice to them.")
           .setAuthor(this.client.user.tag, this.client.user.displayAvatarURL({ size: 64 }))
-          .setImage('https://i.imgur.com/qla8OHZ.png'))
+          .setImage('https://i.imgur.com/Mml6gPK.png'))
       
   }
 }

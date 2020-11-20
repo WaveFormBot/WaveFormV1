@@ -19,7 +19,7 @@ class Slots extends Command {
 
     const embed = this.client.embed()
       .setTitle("Waveform Slots")
-        .setColor(0x7D98F9)
+        .setColor(0x429EFF)
       .setDescription(view)
       .setAuthor(msg.author.tag, msg.author.displayAvatarURL({ size: 64 }));
 
