@@ -1,2 +1,5 @@
 .env
 node_modules
+*.sqlite
+*.sqlite
+.vs/slnx.sqlite

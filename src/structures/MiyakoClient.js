@@ -11,7 +11,7 @@ const presences = require("@json/presences");
 const imgapi = require("img-api");
 const schema = require("@utils/schema");
 
-class WaveFormClient extends Client {
+class MiyakoClient extends Client {
   constructor(dev) {
     super({
       fetchAllMembers: false,
@@ -142,4 +142,4 @@ class WaveFormClient extends Client {
   }
 }
 
-module.exports = WaveFormClient;
+module.exports = MiyakoClient;

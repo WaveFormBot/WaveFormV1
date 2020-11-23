@@ -27,7 +27,7 @@ require("./src/extensions/Guild.js");
 require("./src/extensions/User.js");
 
 // Import the Client.
-const WaveFormClient = require("./src/structures/WaveFormClient.js");
+const MiyakoClient = require("./src/structures/MiyakoClient.js");
 
 // Login. (And start in development mode if --dev is passed)
-new WaveFormClient(process.argv.includes("--dev")).login();
+new MiyakoClient(process.argv.includes("--dev")).login();
