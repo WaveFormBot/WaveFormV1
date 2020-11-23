@@ -21,7 +21,7 @@ class Daily extends Command {
         .replace(/{{time}}/g, this.client.utils.getDuration(msg.member.settings.daily - Date.now())));
 
     if(member.id !== msg.member.id) {
-      if(member.user.bot) throw "Baka! You can't give your daily points to a bot!";
+      if(member.user.bot) throw "Friend! You can't give your daily points to a bot!";
       await this.setCooldown(msg);
       await member.syncSettings();
       await member.givePoints(750);
@@ -36,7 +36,7 @@ class Daily extends Command {
     if(!voted) {
       const embed = this.client.embed()
         .setAuthor(msg.author.username, msg.author.displayAvatarURL({ size: 64 }))
-        .setDescription(`Have you upvoted today?\n\nAn upvote will double your daily claim **on every server** you share with Miyako.${weekend ? " Additionally today is the weekend! Giving you the opportunity to earn **4x** The rewards." : ""}\n\nClick [Here](https://top.gg/bot/${this.client.user.id}/vote) to upvote for the bonus.\n\nDo you wish to claim your daily anyway without voting? (**y**es | **n**o)\n\nReply with \`cancel\` to cancel the message. The message will timeout after 60 seconds.`)
+        .setDescription(`Have you upvoted today?\n\nAn upvote will double your daily claim **on every server** you share with WaveForm.${weekend ? " Additionally today is the weekend! Giving you the opportunity to earn **4x** The rewards." : ""}\n\nClick [Here](https://top.gg/bot/${this.client.user.id}/vote) to upvote for the bonus.\n\nDo you wish to claim your daily anyway without voting? (**y**es | **n**o)\n\nReply with \`cancel\` to cancel the message. The message will timeout after 60 seconds.`)
         .setTimestamp();
       
       const filter = (msg) => msg.author.id === msg.author.id;

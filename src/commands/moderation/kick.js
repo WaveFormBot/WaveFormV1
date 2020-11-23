@@ -14,9 +14,9 @@ class Kick extends Command {
   async run(msg, [member, ...reason]) {
     member = await this.verifyMember(msg, member);
 
-    if(member.id === msg.author.id) return msg.send("Baka! Why would you kick yourself?");
-    if(member.id === this.client.user.id) return msg.send("Baka! Why would you kick me?");
-    if(member.id === msg.guild.ownerID) return msg.send("Baka! You can't kick the owner.");
+    if(member.id === msg.author.id) return msg.send("Friend! Why would you kick yourself?");
+    if(member.id === this.client.user.id) return msg.send("Friend! Why would you kick me?");
+    if(member.id === msg.guild.ownerID) return msg.send("Friend! You can't kick the owner.");
     
     if(member.roles.highest.position >= msg.member.roles.highest.position) return msg.send("You cannot kick this user.");
     if(!member.kickable) return msg.send("I cannot kick this user.");

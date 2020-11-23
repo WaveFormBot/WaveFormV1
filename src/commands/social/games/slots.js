@@ -18,7 +18,7 @@ class Slots extends Command {
     const { win, view, reward } = slots();
 
     const embed = this.client.embed()
-      .setTitle("Miyako Slots")
+      .setTitle("WaveForm Slots")
       .setColor(0xff0000)
       .setDescription(view)
       .setAuthor(msg.author.tag, msg.author.displayAvatarURL({ size: 64 }));

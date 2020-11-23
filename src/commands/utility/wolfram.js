@@ -15,7 +15,7 @@ class Wolfram extends Command {
   async run(msg, args) {
     if(!args.length) return msg.send("What are you trying to ask?");
     
-    // Allow users to trigger this in a fancy way using @Miyako What time is it?
+    // Allow users to trigger this in a fancy way using @WaveForm What time is it?
     // If they invoke it with the "what"/"where"/"when"/"who"/"why" alias, we must also treat it as an argument.
     // A trick to make it look like some advanced A.I bot i guess.
     const query = msg.alias === "what" || msg.alias === "when" || msg.alias === "how" ||

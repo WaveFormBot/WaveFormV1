@@ -12,7 +12,7 @@ class Anime extends Command {
   }
 
   async run(msg, args) {
-    if(!args.length) return msg.send("Baka! What Anime am I supposed to search for?");
+    if(!args.length) return msg.send("Friend! What Anime am I supposed to search for?");
     let [title, page = 1] = args.join(" ").split(", ");
     page = this.verifyInt(page, 1);
 

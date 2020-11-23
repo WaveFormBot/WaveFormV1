@@ -1,19 +1,19 @@
 [
   {
     "type": "PLAYING",
-    "message": "@Miyako help | {{guilds}} servers"
+    "message": "@WaveForm help | {{guilds}} servers"
   },
   {
     "type": "PLAYING",
-    "message": "m!help | {{guilds}} servers"
+    "message": "WaveFormhelp | {{guilds}} servers"
   },
   {
     "type": "PLAYING",
-    "message": "m!invite | {{guilds}} servers"
+    "message": "WaveForminvite | {{guilds}} servers"
   },
   {
     "type": "PLAYING",
-    "message": "m!support | {{guilds}} servers"
+    "message": "WaveFormsupport | {{guilds}} servers"
   },
   {
     "type": "LISTENING",
@@ -29,7 +29,7 @@
   },
   {
     "type": "PLAYING",
-    "message": "invite me using m!invite"
+    "message": "invite me using WaveForminvite"
   },
   {
     "type": "PLAYING",
@@ -41,11 +41,11 @@
   },
   {
     "type": "WATCHING",
-    "message": "Anime"
+    "message": "you having fun!"
   },
   {
     "type": "PLAYING",
-    "message": "with Senpai"
+    "message": "with Code!"
   },
   {
     "type": "PLAYING",

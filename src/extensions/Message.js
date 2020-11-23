@@ -1,7 +1,7 @@
 const { Structures, APIMessage } = require("discord.js");
 const schema = require("@utils/schema");
 
-module.exports = Structures.extend("Message", (Message) => class MiyakoMessage extends Message {
+module.exports = Structures.extend("Message", (Message) => class WaveFormMessage extends Message {
   constructor(...args) {
     super(...args);
     // Last response sent if any, for editing.
@@ -83,7 +83,7 @@ module.exports = Structures.extend("Message", (Message) => class MiyakoMessage e
   /**
    * msg.response([
    *   "{{user}} what are you doing?",
-   *   "Baka! {{user}} stop.",
+   *   "Friend! {{user}} stop.",
    *   "...other responses."
    * ], { user: msg.author.username });
    * Normally a response would be used from client.responses

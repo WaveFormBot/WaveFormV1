@@ -16,7 +16,7 @@ class Feed extends Command {
   async run(msg, [member]) {
     member = await this.verifyMember(msg, member);
 
-    if(member.id === msg.author.id) return msg.send("Baka! You can't feed yourself!");
+    if(member.id === msg.author.id) return msg.send("Friend! You can't feed yourself!");
 
     const { url } = await fetch("https://nekos.life/api/v2/img/feed")
       .then((res) => res.json());

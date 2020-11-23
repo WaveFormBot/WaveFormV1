@@ -10,7 +10,7 @@ class Enchant extends Command {
   }
   
   run(msg, args) {
-    if(!args.length) return msg.send("Baka! You must give me something to enchant.");
+    if(!args.length) return msg.send("Friend! You must give me something to enchant.");
     return msg.send(args.join(" ").toLowerCase()
       .replace(/a/gi, "ᔑ")
       .replace(/b/gi, "ʖ")

@@ -27,7 +27,7 @@ class Help extends Command {
       }
 
       if(cmd.nsfw && (msg.guild && !msg.channel.nsfw))
-        return msg.send("Baka! You can't view details of that command in a non NSFW channel.");
+        return msg.send("Friend! You can't view details of that command in a non NSFW channel.");
 
       return msg.send(this.client.embed(this.client.user)
         .setTitle(`Help for command ${cmd.name}`)
@@ -36,7 +36,7 @@ class Help extends Command {
           `**Category:** ${cmd.category}`,
           `**Aliases:** ${cmd.aliases.length ? cmd.aliases.join(", ") : "None"}`,
           `**Cooldown:** ${cmd.cooldown ? cmd.cooldown + " Seconds" : "None"}`,
-          `**Usage:** ${msg.guild ? msg.guild.settings.prefix : "m!"}${cmd.usage}`,
+          `**Usage:** ${msg.guild ? msg.guild.settings.prefix : "WaveForm"}${cmd.usage}`,
           `**Cost:** ${cost}`,
           `**Extended Help:** ${cmd.extendedHelp}`
         ].join("\n")));
@@ -56,7 +56,7 @@ class Help extends Command {
     const embed = this.client.embed(this.client.user)
       .setTitle("Help - Commands")
       .setDescription("Join our [Discord Server](https://discord.gg/mDkMbEh) for support and updates!")
-      .setFooter("For more information about a command run m!help <command>");
+      .setFooter("For more information about a command run WaveFormhelp <command>");
 
     // Sort the categories alphabetically.
     const keys = Object.keys(map).sort();

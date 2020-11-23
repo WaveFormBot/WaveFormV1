@@ -1,5 +1,5 @@
 {
-  "name": "miyako",
+  "name": "WaveForm",
   "version": "0.0.1",
   "private": true,
   "description": "Discord Bot",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pollen5/miyako.git"
+    "url": "git+https://github.com/pollen5/WaveForm.git"
   },
   "author": "PoLLeN <pollen@itsladybug.ml> (https://itsladybug.ml/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pollen5/miyako/issues"
+    "url": "https://github.com/pollen5/WaveForm/issues"
   },
-  "homepage": "https://github.com/pollen5/miyako#readme",
+  "homepage": "https://github.com/pollen5/WaveForm#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
     "dblapi.js": "^2.4.0",

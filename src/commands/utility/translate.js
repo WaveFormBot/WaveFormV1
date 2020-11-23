@@ -15,9 +15,9 @@ class Translate extends Command {
   }
   
   async run(msg, [language, ...text]) {
-    if(!language) return msg.send("Baka! What language am I supposed to translate to?");
+    if(!language) return msg.send("Friend! What language am I supposed to translate to?");
     if(language.length !== 2) return msg.send("Language must be the 2 letter alias. E.g `French` -> `fr`");
-    if(!text.length) return msg.send("Baka! What am I supposed to translate?");
+    if(!text.length) return msg.send("Friend! What am I supposed to translate?");
 
     const $ = await fetch(`http://translate.google.com/m?hl=${language}&sl=auto&q=${encodeURIComponent(text.join(" "))}`, {
       headers: { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36" }

@@ -12,7 +12,7 @@ class GuildCreate extends Event {
     const exists = this.client.settings.guilds.cache.has(guild.id);
 
     const embed = this.client.embed()
-      .setTitle(exists ? "An unavailable guild came back" : "Miyako joined a new server!")
+      .setTitle(exists ? "An unavailable guild came back" : "WaveForm joined a new server!")
       .setDescription(guild.name)
       .setThumbnail(guild.iconURL())
       .addField("Owner", guild.owner.user.tag)

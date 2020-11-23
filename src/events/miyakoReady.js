@@ -1,6 +1,6 @@
 const Event = require("../structures/Event.js");
 
-class MiyakoReady extends Event {
+class WaveFormReady extends Event {
   async run() {
     // Setup presence.
     this.client.rollPresence();
@@ -11,4 +11,4 @@ class MiyakoReady extends Event {
   } 
 }
 
-module.exports = MiyakoReady;
+module.exports = WaveFormReady;

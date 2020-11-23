@@ -1,6 +1,6 @@
 const { Structures } = require("discord.js");
 
-module.exports = Structures.extend("DMChannel", (DMChannel) => class MiyakoDMChannel extends DMChannel {
+module.exports = Structures.extend("DMChannel", (DMChannel) => class WaveFormDMChannel extends DMChannel {
 
   get readable() {
     // DMs always readable.

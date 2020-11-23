@@ -10,7 +10,7 @@ class Insult extends Command {
 
   async run(msg, [user]) {
     user = await this.verifyUser(msg, user, true);
-    if(user.id === this.client.user.id) return msg.send("Baka! How dare you to try to insult me!");
+    if(user.id === this.client.user.id) return msg.send("Friend! How dare you to try to insult me!");
     const roll = this.client.utils.random; // Shorter to type.
     return msg.send(`${user}, you know what? you're nothing but ${roll(start)} ${roll(middle)} ${roll(end)}.`);
   }

@@ -13,7 +13,7 @@ class Quote extends Command {
   }
 
   async run(msg, [channeltxt, messageid]) {
-    if(!channeltxt && !messageid) return msg.send("Baka! Give me a message ID to quote!");
+    if(!channeltxt && !messageid) return msg.send("Friend! Give me a message ID to quote!");
 
     let channel = msg.channel;
     let message = "";

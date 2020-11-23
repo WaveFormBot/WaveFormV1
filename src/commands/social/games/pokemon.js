@@ -27,7 +27,7 @@ class Pokemon extends Command {
       
     if(!attempts || !attempts.size) {
       await sent.delete();
-      return msg.send(`Ba-Baka! You took too long to answer. It was ${pokemon.name}.`);
+      return msg.send(`Ba-Friend! You took too long to answer. It was ${pokemon.name}.`);
     } 
       
     const answer = attempts.first().content.toLowerCase();
@@ -45,7 +45,7 @@ class Pokemon extends Command {
     }
 
     await sent.delete();
-    return msg.send(`Ba-Baka! You answered incorrectly, It was **${this.client.utils.toProperCase(pokemon.name)}.**`);
+    return msg.send(`Ba-Friend! You answered incorrectly, It was **${this.client.utils.toProperCase(pokemon.name)}.**`);
   } 
 }
 

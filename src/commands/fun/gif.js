@@ -11,7 +11,7 @@ class GIF extends Command {
   }
 
   async run(msg, args) {
-    if(!args.length) return msg.send("Baka! What am I supposed to search?");
+    if(!args.length) return msg.send("Friend! What am I supposed to search?");
 
     const data = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=${process.env.GIPHY}&limit=1&q=${encodeURIComponent(args.join(" "))}`)
       .then((res) => res.json())

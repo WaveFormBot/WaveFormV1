@@ -1,10 +1,10 @@
-# Miyako
+# WaveForm
 
 [![Discord](https://discordapp.com/api/guilds/397479560876261377/embed.png)](https://discord.gg/mDkMbEh)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6686554194274006a8f8ec3122b46902)](https://www.codacy.com/manual/pollen5/miyako?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pollen5/miyako&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6686554194274006a8f8ec3122b46902)](https://www.codacy.com/manual/pollen5/WaveForm?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pollen5/WaveForm&amp;utm_campaign=Badge_Grade)
 [![Discord Bots](https://top.gg/api/widget/status/397796982120382464.svg)](https://top.gg/bot/397796982120382464)
 
-Miyako is a multipurpose [Discord](https://discordapp.com) Bot
+WaveForm is a multipurpose [Discord](https://discordapp.com) Bot
 
 [![Discord Bots](https://top.gg/api/widget/397796982120382464.svg)](https://top.gg/bot/397796982120382464)
 
@@ -12,9 +12,9 @@ This repository contains the always up to date code for the bot so you can contr
 
 See [FEATURES.md](FEATURES.md) for a detailed description about the bot itself, it's the file we use for bot lists etc while this README is more from a developer's perspective for this repository.
 
-See the [CONTRIBUTING.md](CONTRIBUTING.md) file for how to contribute and understanding Miyako's code base.
+See the [CONTRIBUTING.md](CONTRIBUTING.md) file for how to contribute and understanding WaveForm's code base.
 
-## About Miyako
+## About WaveForm
 Here is a (kinda long) story of my bot development on Discord and how this started out.
 
 I made a bunch of bots before but not many was successful, most successful one was me in a team but that died out soon.
@@ -65,8 +65,8 @@ The bot will run with some of the keys missing but the respective commands are n
 
 Clone the repository or fetch it however you want:
 ```sh
-$ git clone https://github.com/ravener/miyako
-$ cd miyako
+$ git clone https://github.com/ravener/WaveForm
+$ cd WaveForm
 ```
 Install dependencies (don't worry I'm very picky about dependencies and keep it very minimal)
 ```sh
@@ -83,4 +83,4 @@ Be sure to join our [support server](https://discord.gg/mDkMbEh) for feedback an
 If you are planning to contribute be sure to check the [TODO list](TODO.md) for what needs to be done.
 
 ## License
-Miyako's code can be used for any purposes under the [MIT License](LICENSE)
+WaveForm's code can be used for any purposes under the [MIT License](LICENSE)

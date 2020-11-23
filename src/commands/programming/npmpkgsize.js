@@ -13,7 +13,7 @@ class NPMPkgSize extends Command {
   }
   
   async run(msg, [name]) {
-    if(!name) return msg.send("Baka! What package am I supposed to show you?");
+    if(!name) return msg.send("Friend! What package am I supposed to show you?");
     
     const { publishSize, installSize } = await fetch(`https://packagephobia.now.sh/api.json?p=${encodeURIComponent(name)}`)
       .then((res) => res.json());

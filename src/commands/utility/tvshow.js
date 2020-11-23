@@ -7,17 +7,17 @@ class TVShow extends Command {
     super(...args, {
       aliases: ["tvshows", "tv", "tvseries"],
       description: "Finds a TV show on TMDB.org",
-      extendedHelp: "e.g. `m!tvshow universe, 2`",
+      extendedHelp: "e.g. `WaveFormtvshow universe, 2`",
       usage: "tvshow <query>, [page]",
       cooldown: 5
     });
   }
 
   async run(msg, args) {
-    if(!args.length) return msg.send("Baka! What am I supposed to search?");
+    if(!args.length) return msg.send("Friend! What am I supposed to search?");
 
     const [query, page = 1] = args.join(" ").split(",");
-    if(isNaN(parseInt(page))) return msg.send("Baka! Page must be a number.");
+    if(isNaN(parseInt(page))) return msg.send("Friend! Page must be a number.");
 
     const url = new URL("https://api.themoviedb.org/3/search/tv");
     url.search = new URLSearchParams([["api_key", process.env.TMDB], ["query", query]]);

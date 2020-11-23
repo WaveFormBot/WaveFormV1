@@ -11,7 +11,7 @@ class WeebGreetings extends Command {
   }
 
   async run(msg, [action]) {
-    if(!action) return msg.send("Baka! Specify either `enable #channel` or `disable`");
+    if(!action) return msg.send("Friend! Specify either `enable #channel` or `disable`");
 
     if(action === "disable") {
       await msg.guild.update({ weebGreetings: null });
@@ -19,13 +19,13 @@ class WeebGreetings extends Command {
     }
 
     if(action === "enable") {
-      if(!msg.mentions.channels.size) return msg.send("Baka! Specify the channel you want to enable it on.");
+      if(!msg.mentions.channels.size) return msg.send("Friend! Specify the channel you want to enable it on.");
       const channel = msg.mentions.channels.first();
       await msg.guild.update({ weebGreetings: channel.id });
       return msg.send(`Successfully enabled weeb greetings for the channel ${channel}`);
     }
 
-    return msg.send("Baka! Invalid action either specify `enable #channel` or `disable`");
+    return msg.send("Friend! Invalid action either specify `enable #channel` or `disable`");
   }
 }
 

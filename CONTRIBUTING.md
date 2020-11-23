@@ -1,5 +1,5 @@
-# Contributing to Miyako
-Miyako is all open-source and is always open for contributions so feel free to send in pull requests anytime.
+# Contributing to WaveForm
+WaveForm is all open-source and is always open for contributions so feel free to send in pull requests anytime.
 
 ## Understanding the code.
 This guide will guide you through the code and help better understand the structure of the code.

@@ -16,7 +16,7 @@ class Slap extends Command {
   async run(msg, [member]) {
     member = await this.verifyMember(msg, member);
 
-    if(member.id === msg.author.id) return msg.send("Baka! You can't slap yourself!");
+    if(member.id === msg.author.id) return msg.send("Friend! You can't slap yourself!");
 
     const { url } = await fetch("https://nekos.life/api/v2/img/slap")
       .then((res) => res.json());

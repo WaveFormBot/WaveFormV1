@@ -4,7 +4,7 @@ class Store extends Command {
   constructor(...args) {
     super(...args, {
       description: "Buy/Sell Roles in exchange for social currency.",
-      extendedHelp: "Examples:\n  **m!store add 1000 VIP** (sell VIP role for ¥1000)\n  **m!store add 0 Cool Guy** (Sell the Cool Guy role for free)\n  **m!store buy VIP** (buy the role.)\n  **m!store sell VIP** (sell and remove the role for a 50% refund)",
+      extendedHelp: "Examples:\n  **WaveFormstore add 1000 VIP** (sell VIP role for ¥1000)\n  **WaveFormstore add 0 Cool Guy** (Sell the Cool Guy role for free)\n  **WaveFormstore buy VIP** (buy the role.)\n  **WaveFormstore sell VIP** (sell and remove the role for a 50% refund)",
       usage: "store <add|sell|buy|delete|view:default> <role>",
       guildOnly: true,
       aliases: ["shop"],
@@ -26,10 +26,10 @@ class Store extends Command {
     const role = msg.guild.roles.cache.find((r) => (r.id === rolename) || (r.name.toLowerCase() === rolename));
     if(!role) return msg.send("That role does not exist!");
 
-    if(!msg.member.roles.cache.has(role.id)) return msg.send("Baka! You don't have that role!");
+    if(!msg.member.roles.cache.has(role.id)) return msg.send("Friend! You don't have that role!");
 
     const store = this.client.settings.store.get(role.id);
-    if(!store) return msg.send("Baka! That role is not for sale!");
+    if(!store) return msg.send("Friend! That role is not for sale!");
 
     if(role.position > msg.guild.me.roles.highest.position)
       return msg.send("I cannot remove that role from you! My role position needs to be higher than the role you are trying to sell.");
@@ -50,15 +50,15 @@ class Store extends Command {
     const role = msg.guild.roles.cache.find((r) => (r.id === rolename) || (r.name.toLowerCase() === rolename));
     if(!role) return msg.send("That role does not exist!");
 
-    if(msg.member.roles.cache.has(role.id)) return msg.send("Baka! You already have that role.");
+    if(msg.member.roles.cache.has(role.id)) return msg.send("Friend! You already have that role.");
 
     const store = this.client.settings.store.get(role.id);
 
-    if(!store) return msg.send("Baka! That role is not for sale!");
+    if(!store) return msg.send("Friend! That role is not for sale!");
     const price = parseInt(store.price);
 
     if(msg.member.points < price)
-      return msg.send(`Baka! You only have **¥${msg.member.points.toLocaleString()}**, but the role costs: **¥${price.toLocaleString()}**`);
+      return msg.send(`Friend! You only have **¥${msg.member.points.toLocaleString()}**, but the role costs: **¥${price.toLocaleString()}**`);
 
     if(role.position > msg.guild.me.roles.highest.position)
       return msg.send("I cannot add that role to you! My role position must be higher than the role you are trying to buy.");
@@ -71,7 +71,7 @@ class Store extends Command {
 
   async delete(msg, args) {
     if(!msg.member.permissions.has("MANAGE_GUILD"))
-      return msg.send("Baka! You need the `Manage Server` permissions to delete roles from the store.");
+      return msg.send("Friend! You need the `Manage Server` permissions to delete roles from the store.");
 
     const rolename = args.join(" ").toLowerCase();
     if(!rolename) return msg.send(`Usage: \`${msg.guild.settings.prefix}store delete <role>\``);
@@ -89,13 +89,13 @@ class Store extends Command {
   async add(msg, [price, ...args]) {
     // Check for permissions.
     if(!msg.member.permissions.has("MANAGE_GUILD"))
-      return msg.send("Baka! You need the `Manage Server` permissions to add roles to the store.");
+      return msg.send("Friend! You need the `Manage Server` permissions to add roles to the store.");
 
     if(!price) return msg.send(`Usage: \`${msg.guild.settings.prefix}store add <price> <rolename>`);
     price = this.verifyInt(price);
 
     // Always guard against abuse.
-    if(price >= Number.MAX_SAFE_INTEGER) return msg.send("Baka! That price is too high.");
+    if(price >= Number.MAX_SAFE_INTEGER) return msg.send("Friend! That price is too high.");
 
     // Verify the role.
     const rolename = args.join(" ").toLowerCase();

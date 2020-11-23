@@ -10,7 +10,7 @@ class RandomCase extends Command {
   }
 
   async run(msg, args) {
-    if(!args.length) return msg.send("Baka! You didn't give me any input.");
+    if(!args.length) return msg.send("Friend! You didn't give me any input.");
 
     return msg.send(args.join(" ").replace(/\w/g, (ch) => {
       const fn = this.client.utils.random([ch.toUpperCase, ch.toLowerCase]);

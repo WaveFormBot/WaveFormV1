@@ -15,7 +15,7 @@ class AddRole extends Command {
   async run(msg, [member, ...rolename]) {
     member = await this.verifyMember(msg, member);
     rolename = rolename.join(" ");
-    if(!rolename) return msg.send("Baka! You must provide the name or ID of the role you want to add.");
+    if(!rolename) return msg.send("Friend! You must provide the name or ID of the role you want to add.");
 
     // TODO: Add some role helper.
     const role = msg.guild.roles.cache.find((role) => (role.id === rolename) || (role.name.toLowerCase() === rolename.toLowerCase()));

@@ -1,11 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\src",
-    "\\src\\commands",
-    "\\src\\commands\\images",
-    "\\src\\commands\\misc"
+    ""
   ],
-  "SelectedNode": "\\src\\commands\\images\\crush.js",
   "PreviewInSolutionExplorer": false
 }

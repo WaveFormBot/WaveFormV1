@@ -12,7 +12,7 @@ class NumberFact extends Command {
   }
 
   async run(msg, [number = "random"]) {
-    if(number !== "random" && isNaN(parseInt(number))) return msg.send("Baka! Does that look like a number to you?");
+    if(number !== "random" && isNaN(parseInt(number))) return msg.send("Friend! Does that look like a number to you?");
     const text = await fetch(`http://numbersapi.com/${number}`).then((res) => res.text());
     return msg.send(`**${text}**`);
   }

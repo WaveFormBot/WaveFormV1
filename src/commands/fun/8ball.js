@@ -33,7 +33,7 @@ class Eightball extends Command {
   }
   
   async run(msg, [question]) {
-    if(!question) return msg.send("Baka! What do you want to ask?");
+    if(!question) return msg.send("Friend! What do you want to ask?");
     const sent = await msg.send(`${this.client.constants.typing} **8ball** is thinking...`);
     await this.client.utils.sleep(1500);
     return sent.edit(`**${this.client.utils.random(this.responses)}**`);

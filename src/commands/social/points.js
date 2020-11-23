@@ -12,7 +12,7 @@ class Points extends Command {
 
   async run(msg, [user]) {
     const member = await this.verifyMember(msg, user, true);
-    if(member.user.bot) return msg.send("Baka! Bots don't have points.");
+    if(member.user.bot) return msg.send("Friend! Bots don't have points.");
     await member.syncSettings();
 
     return msg.send(this.client.utils.random(member.id === msg.author.id ?

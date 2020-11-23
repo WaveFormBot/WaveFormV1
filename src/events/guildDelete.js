@@ -12,7 +12,7 @@ class GuildDelete extends Event {
     const channel = this.client.channels.cache.get("454776806869041154");
 
     const embed = this.client.embed()
-      .setTitle("Miyako left a server.")
+      .setTitle("WaveForm left a server.")
       .setDescription(guild.name)
       .setThumbnail(guild.iconURL())
       .setColor(0xFF0000)

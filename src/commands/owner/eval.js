@@ -21,7 +21,7 @@ class Eval extends Command {
   }
 
   async run(msg, args) {
-    if(!args.length) return msg.send("Baka! You need to give me code to evaluate.");
+    if(!args.length) return msg.send("Friend! You need to give me code to evaluate.");
 
     const { clean, client } = this;
     const { code } = this.client.utils.getCodeBlock(msg.rawArgs);

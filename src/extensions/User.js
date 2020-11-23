@@ -1,6 +1,6 @@
 const { Structures } = require("discord.js");
 
-module.exports = Structures.extend("User", (User) => class MiyakoUser extends User {
+module.exports = Structures.extend("User", (User) => class WaveFormUser extends User {
   get settings() {
     return this.client.settings.users.getDefaults(this.id);
   }

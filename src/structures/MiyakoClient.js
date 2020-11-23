@@ -11,7 +11,7 @@ const presences = require("@json/presences");
 const imgapi = require("img-api");
 const schema = require("@utils/schema");
 
-class MiyakoClient extends Client {
+class WaveFormClient extends Client {
   constructor(dev) {
     super({
       fetchAllMembers: false,
@@ -54,7 +54,7 @@ class MiyakoClient extends Client {
   onReady() {
     this.ready = true;
     this.console.log(`Logged in as ${this.user.tag}`);
-    this.emit("miyakoReady");
+    this.emit("WaveFormReady");
   }
 
   async login() {
@@ -101,7 +101,7 @@ class MiyakoClient extends Client {
    * @returns {MessageEmbed}
    */
   embed(user) {
-    const embed = new MessageEmbed().setColor(0xD3176A);
+    const embed = new MessageEmbed().setColor(0x429EFF);
 
     if(user) embed.setAuthor(user.tag, user.displayAvatarURL({ size: 64 }));
 
@@ -142,4 +142,4 @@ class MiyakoClient extends Client {
   }
 }
 
-module.exports = MiyakoClient;
+module.exports = WaveFormClient;

@@ -14,9 +14,9 @@ class Ban extends Command {
   async run(msg, [member, ...reason]) {
     member = await this.verifyMember(msg, member);
 
-    if(member.id === msg.author.id) return msg.send("Baka! Why would you ban yourself?");
-    if(member.id === this.client.user.id) return msg.send("Baka! Why would you ban me?");
-    if(member.id === msg.guild.ownerID) return msg.send("Baka! You can't ban the owner.");
+    if(member.id === msg.author.id) return msg.send("Friend! Why would you ban yourself?");
+    if(member.id === this.client.user.id) return msg.send("Friend! Why would you ban me?");
+    if(member.id === msg.guild.ownerID) return msg.send("Friend! You can't ban the owner.");
     
     if(member.roles.highest.position >= msg.member.roles.highest.position) return msg.send("You cannot ban this user.");
     if(!member.bannable) return msg.send("I cannot ban this user.");

@@ -9,18 +9,18 @@ class Leave extends Command {
   }
 
   async run(msg, [guild]) {
-    if(!guild) return msg.send("Baka! What guild should I leave?");
+    if(!guild) return msg.send("Friend! What guild should I leave?");
     if(guild === "this" && msg.guild) guild = msg.guild.id;
 
     guild = this.client.guilds.cache.get(guild);
-    if(!guild) return msg.send("Baka! I'm not in that server.");
+    if(!guild) return msg.send("Friend! I'm not in that server.");
     
     await msg.send(`Are you sure you want me to leave **${guild.name}** (${guild.id})`);
     const filter = (msg) => msg.author.id === msg.author.id;
     const attempts = await msg.channel.awaitMessages(filter, { time: 15000, max: 1 });
 
     if(!attempts || !attempts.size) {
-      return msg.send("Ba-Baka! You took too long to answer.");
+      return msg.send("Ba-Friend! You took too long to answer.");
     }
 
     const answer = attempts.first().content.toLowerCase();

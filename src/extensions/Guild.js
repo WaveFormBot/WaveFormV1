@@ -1,6 +1,6 @@
 const { Structures } = require("discord.js");
 
-module.exports = Structures.extend("Guild", (Guild) => class MiyakoGuild extends Guild {
+module.exports = Structures.extend("Guild", (Guild) => class WaveFormGuild extends Guild {
   get settings() {
     return this.client.settings.guilds.getDefaults(this.id);
   }

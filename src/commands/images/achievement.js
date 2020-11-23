@@ -18,11 +18,11 @@ class Achievement extends Command {
         return msg.author;
       });
 
-    if(!args.length) return msg.send("Baka! You need to provide some text.");
+    if(!args.length) return msg.send("Friend! You need to provide some text.");
 
     const text = args.join(" ");
 
-    if(text.length > 21) return msg.send("Baka! Text cannot be longer than 21 characters.");
+    if(text.length > 21) return msg.send("Friend! Text cannot be longer than 21 characters.");
 
     const img = await this.client.img.achievement(user.displayAvatarURL({ size: 64, format: "png" }), text);
 

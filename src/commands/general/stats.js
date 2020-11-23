@@ -22,8 +22,8 @@ class Stats extends Command {
       `${seconds} Seconds`].filter((time) => !time.startsWith("0")).join(", ");
 
     return msg.send(this.client.embed()
-      .setTitle("Miyako - Bot Statistics")
-      .setDescription("Hi, I'm Miyako. The all-in-one entertainment bot for your server brought to you by my master Ravener#5796")
+      .setTitle("WaveForm - Bot Statistics")
+      .setDescription("Hi, I'm WaveForm. The all-in-one entertainment bot for your server brought to you by my master Ravener#5796")
       .setAuthor(this.client.user.tag, this.client.user.displayAvatarURL({ size: 64 }))
       .addField("Bot Stats", [
         `**Guilds:** ${client.guilds.cache.size}`,
@@ -42,7 +42,7 @@ class Stats extends Command {
         `**Commands Ran:** ${this.store.ran}`
       ].join("\n"))
       .addField("Links", [
-        ":star: [Github Repository](https://github.com/pollen5/miyako)",
+        ":star: [Github Repository](https://github.com/pollen5/WaveForm)",
         ":robot: [Upvote me at top.gg](https://top.gg/bot/397796982120382464)",
         ":envelope_with_arrow: [Invite me to your server](https://discordapp.com/oauth2/authorize?client_id=397796982120382464&permissions=2016537702&scope=bot)",
         ":video_game: [Join our Discord Server](https://discord.gg/mDkMbEh)"

@@ -16,7 +16,7 @@ class Kiss extends Command {
   async run(msg, [member]) {
     member = await this.verifyMember(msg, member);
 
-    if(member.id === msg.author.id) return msg.send("Baka! You can't kiss yourself!");
+    if(member.id === msg.author.id) return msg.send("Friend! You can't kiss yourself!");
 
     const { url } = await fetch("https://nekos.life/api/v2/img/kiss")
       .then((res) => res.json());

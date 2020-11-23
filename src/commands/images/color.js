@@ -13,7 +13,7 @@ class Color extends Command {
   }
 
   async run(msg, args) {
-    if(!args.length) return msg.send("Baka! You need to provide a color #HEX or a name.");
+    if(!args.length) return msg.send("Friend! You need to provide a color #HEX or a name.");
 
     const img = await this.client.img.color(args.join(" "))
       .catch((err) => {

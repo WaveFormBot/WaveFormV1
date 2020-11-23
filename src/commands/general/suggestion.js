@@ -12,7 +12,7 @@ class Suggestion extends Command {
   }
   
   async run(msg, args) {
-    if(!args.length) return msg.send("Baka! What's your idea?");
+    if(!args.length) return msg.send("Friend! What's your idea?");
 
     const channel = this.client.channels.cache.get("460801007769616394");
 

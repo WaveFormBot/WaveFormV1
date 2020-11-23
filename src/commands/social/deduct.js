@@ -17,16 +17,16 @@ class Deduct extends Command {
     member = await this.verifyMember(msg, member);
     amount = this.verifyInt(amount);
 
-    if(member.user.bot) return msg.send("Baka! Bots can't have points.");
-    if(member.user.id === msg.author.id) return msg.send("Baka! You can't punish yourself. Why did you even try it?");
+    if(member.user.bot) return msg.send("Friend! Bots can't have points.");
+    if(member.user.id === msg.author.id) return msg.send("Friend! You can't punish yourself. Why did you even try it?");
     
-    if(amount < 0) return msg.rely("Baka! You can't deduct a negative amount.");
-    if(amount === 0) return msg.send("Baka! Why would you deduct nothing?");
+    if(amount < 0) return msg.rely("Friend! You can't deduct a negative amount.");
+    if(amount === 0) return msg.send("Friend! Why would you deduct nothing?");
 
     // Synchronize settings before reading points.
     await member.syncSettings();
 
-    if(member.points < amount) return msg.send("Baka! You can't deduct more than their balance.");
+    if(member.points < amount) return msg.send("Friend! You can't deduct more than their balance.");
 
     await member.takePoints(amount);
 

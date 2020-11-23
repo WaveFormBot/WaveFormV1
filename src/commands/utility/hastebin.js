@@ -12,7 +12,7 @@ class Hastebin extends Command {
   }
 
   async run(msg, args) {
-    if(!args.length) return msg.send("Baka! What am I supposed to upload?");
+    if(!args.length) return msg.send("Friend! What am I supposed to upload?");
 
     const { code, lang } = this.client.utils.getCodeBlock(msg.rawArgs);
   

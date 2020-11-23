@@ -10,7 +10,7 @@ const delim = new RegExp("(\\s)(?:\\s)+");
 class CommandHandler extends Monitor {
   constructor(...args) {
     super(...args);
-    this.prefix = "m!"; // Default prefix.
+    this.prefix = "WaveForm"; // Default prefix.
     this.ratelimits = new Collection();
     this.friendlyPerms = Object.keys(Permissions.FLAGS).reduce((obj, key) => {
       obj[key] = this.client.utils.toProperCase(key.split("_").join(" "));
@@ -74,16 +74,16 @@ class CommandHandler extends Monitor {
       `|${msg.author.settings.prefix.map((p) => `^${this.client.utils.escapeRegex(p)}`).join("|")}` : "";
 
     // Possibilities:
-    // - miyako ping
-    // - yo miyako ping
-    // - hey miyako ping
-    // - @Miyako ping
-    // - m!ping
+    // - WaveForm ping
+    // - yo WaveForm ping
+    // - hey WaveForm ping
+    // - @WaveForm ping
+    // - WaveFormping
     // - Or custom prefix.
     // - Or custom per-user prefix.
     //
-    // A comma can be added after the (hey|yo|ok) and the (miyako) (e.g hey, miyako, ping)
-    const prefixMatch = new RegExp(`^(?:(?:(?:hey|yo|ok),? )?miyako,? )|^<@!?${this.client.user.id}> |^${
+    // A comma can be added after the (hey|yo|ok) and the (WaveForm) (e.g hey, WaveForm, ping)
+    const prefixMatch = new RegExp(`^(?:(?:(?:hey|yo|ok),? )?WaveForm,? )|^<@!?${this.client.user.id}> |^${
       this.client.utils.escapeRegex(prefix)}${userPrefix}`, "i").exec(msg.content);
 
     // If the message is not a command do nothing.
@@ -108,14 +108,14 @@ class CommandHandler extends Monitor {
     // Command checks.
 
     if(command.ownerOnly && msg.author.id !== this.client.constants.ownerID)
-      return msg.send("Baka! What do you think you're doing? That command is only for my master!");
+      return msg.send("Friend! What do you think you're doing? That command is only for my master!");
 
     // Check for NSFW channel. NSFW is allowed in DMs
     if(command.nsfw && msg.guild && !msg.channel.nsfw)
       return msg.send(this.client.utils.random(this.client.responses.notNSFWChannel));
 
     if(command.guildOnly && !msg.guild)
-      return msg.send("Baka! This command can only be used in a guild. What are you doing sliding in my DMs?");
+      return msg.send("Friend! This command can only be used in a guild. What are you doing sliding in my DMs?");
 
     if(!command.enabled && msg.author.id !== this.client.constants.ownerID)
       return msg.send("My master has ordered me to disable that command so I cannot let you use it!");
